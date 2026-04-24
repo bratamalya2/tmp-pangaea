@@ -1,0 +1,68 @@
+[
+  {
+    "id": "usd-nfp",
+    "day": "Today",
+    "time": "08:30",
+    "currency": "USD",
+    "event": "Non-Farm Payrolls",
+    "impact": "High",
+    "actual": "-",
+    "forecast": "185K",
+    "previous": "187K"
+  },
+  {
+    "id": "usd-unemployment",
+    "day": "Today",
+    "time": "08:30",
+    "currency": "USD",
+    "event": "Unemployment Rate",
+    "impact": "High",
+    "actual": "-",
+    "forecast": "3.7%",
+    "previous": "3.8%"
+  },
+  {
+    "id": "eur-ecb-speech",
+    "day": "Today",
+    "time": "10:00",
+    "currency": "EUR",
+    "event": "ECB President Speech",
+    "impact": "Medium",
+    "actual": "-",
+    "forecast": "-",
+    "previous": "-"
+  },
+  {
+    "id": "cad-employment",
+    "day": "Tomorrow",
+    "time": "12:30",
+    "currency": "CAD",
+    "event": "Employment Change",
+    "impact": "Medium",
+    "actual": "-",
+    "forecast": "22.0K",
+    "previous": "18.5K"
+  },
+  {
+    "id": "usd-ism-services",
+    "day": "This Week",
+    "time": "14:00",
+    "currency": "USD",
+    "event": "ISM Services PMI",
+    "impact": "High",
+    "actual": "-",
+    "forecast": "52.5",
+    "previous": "51.8"
+  },
+  {
+    "id": "nzd-employment",
+    "day": "This Week",
+    "time": "22:45",
+    "currency": "NZD",
+    "event": "Employment Change q/q",
+    "impact": "Low",
+    "actual": "-",
+    "forecast": "0.3%",
+    "previous": "0.2%"
+  }
+]
