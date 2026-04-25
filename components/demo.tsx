@@ -68,7 +68,7 @@ export function SparklesPreviewDark() {
   return (
     <div
       ref={heroRef}
-      className="relative flex min-h-[calc(100svh-5rem)] w-full flex-col items-center justify-center overflow-hidden transition-colors duration-300"
+      className="relative flex min-h-[calc(100svh-5rem)] w-full flex-col items-center justify-center overflow-hidden px-4 py-10 transition-colors duration-300 sm:py-14"
       style={{ backgroundColor: colors.background }}
     >
       <motion.div className="w-full absolute inset-0 h-screen" style={{ y: particleY }}>
@@ -84,31 +84,17 @@ export function SparklesPreviewDark() {
         />
       </motion.div>
       <motion.div
-        className="relative z-20 flex max-w-5xl flex-col items-center px-4 text-center"
+        className="relative z-20 flex w-full max-w-4xl flex-col items-center text-center"
         style={{ y: contentY, opacity: contentOpacity }}
       >
-        <div className="mb-5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-indigo-500">
-          New: Unleash Trading Potential with MetaTrader 5
+        <div className="mb-5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-indigo-500 sm:text-sm">
+          MetaTrader 5 access for modern traders
         </div>
-        <h1
-          className="text-center text-4xl font-bold leading-none text-[#030D1F] transition-colors duration-300 sm:text-5xl md:text-7xl lg:text-9xl"
-          style={{ color: colors.text }}
+        <div
+          className={`mt-5 max-w-3xl text-center text-[14px] min-[450px]:text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium ${theme === "light" ? "text-[#030D1F]" : "text-white"
+            }`}
         >
-          PANGAEA
-        </h1>
-        <p className={`mt-3 text-xl font-semibold md:text-3xl ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>
-          Institutional-grade trading technology for retail traders.
-        </p>
-        <p className={`mt-4 max-w-3xl text-base leading-7 md:text-lg ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
-          Put MetaTrader precision in your hands with fast platform access,
-          multi-asset markets and no-compromise execution tools.
-        </p>
-        <p
-          className={`mt-5 max-w-3xl text-center text-lg font-medium md:text-2xl ${
-            theme === "light" ? "text-[#030D1F]" : "text-white"
-          }`}
-        >
-          Trade{" "}
+          Transact{" "}
           <Typewriter
             text={heroTypewriterPhrases}
             speed={70}
@@ -118,17 +104,25 @@ export function SparklesPreviewDark() {
             cursorChar="_"
           />{" "}
           from one account.
+        </div>
+        <p className={`mt-3 text-lg font-semibold ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>
+          Founded on the principle of radical transparency, PANGAEA is a multi-asset brokerage built for the modern era. We provide a unified gateway to Forex, Commodities, Crypto, Indices, and Stocks.
         </p>
-        <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+        <p className={`mt-4 max-w-3xl text-base leading-7 md:text-lg ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
+          Experience institutional-grade technology, multi-asset market access
+          and MetaTrader precision built for retail traders.
+        </p>
+
+        <div className="mt-8 flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
           <Link
             href="/pages/account-types"
-            className="inline-flex items-center justify-center rounded-full bg-indigo-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all hover:scale-105 hover:bg-indigo-700"
+            className="inline-flex w-full items-center justify-center rounded-full bg-indigo-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all hover:scale-105 hover:bg-indigo-700 sm:w-auto"
           >
             Start Trading Now
           </Link>
           <Link
             href="/pages/platforms"
-            className="inline-flex items-center justify-center rounded-full border px-8 py-4 text-sm font-bold transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            className="inline-flex w-full items-center justify-center rounded-full border px-8 py-4 text-sm font-bold transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 sm:w-auto"
             style={{ borderColor: theme === "light" ? "#d4d4d8" : "#374151" }}
           >
             Book a Demo

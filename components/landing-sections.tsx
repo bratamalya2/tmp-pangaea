@@ -43,6 +43,13 @@ function ParallaxImage({
 
 export function StatsSection() {
   const { theme } = useTheme();
+  const sectionRef = React.useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 85%", "end 20%"],
+  });
+  const valueParallaxY = useTransform(scrollYProgress, [0, 1], [24, -16]);
+  const labelParallaxY = useTransform(scrollYProgress, [0, 1], [12, -8]);
 
   const stats = [
     { value: "< 12ms", label: "Average Execution" },
@@ -52,16 +59,137 @@ export function StatsSection() {
   ];
 
   return (
-    <section className="py-16 border-y" style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}>
+    <section
+      ref={sectionRef}
+      className="py-16 border-y"
+      style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x" style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}>
+        <motion.div
+          className="grid grid-cols-2 gap-y-10 md:grid-cols-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.35 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.11,
+              },
+            },
+          }}
+        >
           {stats.map((stat, idx) => (
-            <div key={idx} className="text-center px-4">
-              <div className="text-3xl md:text-5xl font-bold mb-2 text-indigo-500">{stat.value}</div>
-              <div className="text-sm uppercase tracking-widest font-semibold opacity-70">{stat.label}</div>
-            </div>
+            <motion.div
+              key={idx}
+              className={cn(
+                "px-4 text-center",
+                idx % 2 === 0 && "border-r",
+                idx < stats.length - 1 && "md:border-r"
+              )}
+              style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}
+              variants={{
+                hidden: { opacity: 0, y: 24, scale: 0.96 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  transition: {
+                    duration: 0.55,
+                    ease: "easeOut",
+                  },
+                },
+              }}
+            >
+              <motion.div
+                className="relative isolate will-change-transform"
+                style={{ y: valueParallaxY }}
+              >
+                <motion.span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-12 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/25 blur-xl md:h-16 md:w-32"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.45 },
+                    visible: {
+                      opacity: [0, 0.9, 0.2],
+                      scale: [0.55, 1.35, 1],
+                      transition: {
+                        duration: 0.75,
+                        delay: 0.08,
+                        ease: "easeOut",
+                      },
+                    },
+                  }}
+                />
+                <motion.div
+                  className="relative mx-auto mb-2 inline-block overflow-hidden text-3xl font-bold text-indigo-500 drop-shadow-[0_0_18px_rgba(99,102,241,0.35)] md:text-5xl"
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: 18,
+                      scale: 0.9,
+                      filter: "blur(10px)",
+                    },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      scale: [0.9, 1.08, 1],
+                      filter: "blur(0px)",
+                      transition: {
+                        duration: 0.72,
+                        delay: 0.12,
+                        ease: "easeOut",
+                      },
+                    },
+                  }}
+                >
+                  {stat.value}
+                  <motion.span
+                    aria-hidden="true"
+                    className={cn(
+                      "pointer-events-none absolute inset-y-0 -left-16 w-12 skew-x-[-18deg] bg-gradient-to-r from-transparent to-transparent",
+                      theme === "light" ? "via-white/90" : "via-indigo-100/90"
+                    )}
+                    variants={{
+                      hidden: { x: "-120%", opacity: 0 },
+                      visible: {
+                        x: "420%",
+                        opacity: [0, 1, 0],
+                        transition: {
+                          duration: 0.85,
+                          delay: 0.2 + idx * 0.08,
+                          ease: "easeOut",
+                        },
+                      },
+                    }}
+                  />
+                </motion.div>
+              </motion.div>
+              <motion.div
+                className="will-change-transform"
+                style={{ y: labelParallaxY }}
+              >
+                <motion.div
+                  className="text-sm font-semibold uppercase tracking-widest opacity-70"
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: {
+                      opacity: 0.7,
+                      y: 0,
+                      transition: {
+                        duration: 0.45,
+                        delay: 0.2,
+                        ease: "easeOut",
+                      },
+                    },
+                  }}
+                >
+                  {stat.label}
+                </motion.div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -74,17 +202,17 @@ export function FeaturesSection() {
     {
       icon: <Wallet size={32} className="text-indigo-500" />,
       title: "Flexible Accounts",
-      description: "Choose from Standard, Swap-Free, Zero Spread, or 100% Bonus accounts — tailored to your style."
+      description: "Choose from Standard, Swap-Free, Zero Spread, or 100% Bonus accounts - tailored to your style."
     },
     {
       icon: <Zap size={32} className="text-indigo-500" />,
       title: "Institutional Grade",
-      description: "Ultra-low latency execution, precision pricing, and 99.9% uptime — built for serious traders."
+      description: "Ultra-low latency execution, precision pricing, and 99.9% uptime - built for serious traders."
     },
     {
       icon: <Laptop size={32} className="text-indigo-500" />,
       title: "Multi-Platform Access",
-      description: "MetaTrader 5, WebTrader, or our native mobile app — one account, any device, anywhere."
+      description: "MetaTrader 5, WebTrader, or our native mobile app - one account, any device, anywhere."
     },
     {
       icon: <ShieldCheck size={32} className="text-indigo-500" />,
@@ -347,7 +475,7 @@ export function StepsSection() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="md:w-1/3">
             <h2 className="text-4xl md:text-5xl font-semibold mb-6">Get started in minutes.</h2>
-            <p className="text-lg opacity-70 mb-8">Four simple steps to your first trade. Join thousands of traders worldwide who trust Panagea.</p>
+            <p className="text-lg opacity-70 mb-8">Four simple steps to your first trade. Join thousands of traders worldwide who trust Pangaea.</p>
             <button className="px-8 py-4 bg-indigo-600 text-white rounded-full font-bold shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 hover:scale-105 transition-all">
               Create Free Account
             </button>

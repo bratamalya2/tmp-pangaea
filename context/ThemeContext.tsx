@@ -9,6 +9,7 @@ interface ThemeContextType {
   toggleTheme: () => void;
   colors: {
     background: string;
+    heroText: string;
     text: string;
     canvasBg: string;
   };
@@ -25,6 +26,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const colors = {
     background: theme === "light" ? "#ffffff" : "#040404",
+    heroText: theme === "light" ? "#625FFF" : "#ffffff",
     text: theme === "light" ? "#000000" : "#ffffff",
     canvasBg: theme === "light" ? "rgba(255, 255, 255, 0.1)" : "rgba(4, 4, 4, 0.1)",
   };
