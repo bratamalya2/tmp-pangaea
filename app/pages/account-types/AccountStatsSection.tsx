@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -28,36 +27,10 @@ type AccountStatsSectionProps = {
   themeMode: ThemeMode;
 };
 
-function SectionImage({
-  src,
-  alt,
-  caption,
-  className,
-}: StatsImage & {
-  className?: string;
-}) {
-  return (
-    <div className={cn("relative overflow-hidden rounded-2xl border shadow-2xl", className)}>
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="260px"
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030D20]/90 via-[#030D20]/20 to-transparent" />
-      <div className="absolute bottom-5 left-5 right-5 text-sm font-bold uppercase tracking-widest text-white/90">
-        {caption}
-      </div>
-    </div>
-  );
-}
-
 export default function AccountStatsSection({
   border,
   altSurface,
   muted,
-  image,
   themeMode,
 }: AccountStatsSectionProps) {
   const sectionRef = React.useRef<HTMLElement>(null);
@@ -74,9 +47,9 @@ export default function AccountStatsSection({
       className="border-y py-8"
       style={{ borderColor: border, backgroundColor: altSurface }}
     >
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_260px] lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="grid grid-cols-2 gap-6 lg:grid-cols-4"
+          className="grid grid-cols-2 place-items-center gap-6 text-center lg:grid-cols-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.45 }}
@@ -92,7 +65,7 @@ export default function AccountStatsSection({
           {accountStats.map(([value, label], idx) => (
             <motion.div
               key={label}
-              className="relative isolate"
+              className="relative isolate flex w-full flex-col items-center"
               variants={{
                 hidden: { opacity: 0, y: 22, scale: 0.96 },
                 visible: {
@@ -194,16 +167,6 @@ export default function AccountStatsSection({
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          className="hidden lg:block"
-          initial={{ opacity: 0, x: 24, scale: 0.96 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55, delay: 0.18, ease: "easeOut" }}
-        >
-          <SectionImage {...image} className="h-28" />
         </motion.div>
       </div>
     </section>

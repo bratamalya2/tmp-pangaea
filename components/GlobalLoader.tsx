@@ -33,13 +33,12 @@ export function GlobalLoader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 ${
-        fadeLoader ? "opacity-0" : "opacity-100"
-      }`}
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 ${fadeLoader ? "opacity-0" : "opacity-100"
+        }`}
       style={{ backgroundColor: colors.background }}
     >
       <img
-        src="/images/logo-dark.jpeg"
+        src="/images/logo-dark.png"
         alt="Panagea Logo"
         className="h-12 w-auto mb-8 animate-pulse"
       />

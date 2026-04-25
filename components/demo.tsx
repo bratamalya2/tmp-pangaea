@@ -77,7 +77,7 @@ export function SparklesPreviewDark() {
           background="transparent"
           minSize={0.6}
           maxSize={1.4}
-          particleDensity={100}
+          particleDensity={70}
           className="w-full h-full"
           particleColor={theme === "light" ? "#000000" : "#FFFFFF"}
           speed={1}
@@ -90,7 +90,7 @@ export function SparklesPreviewDark() {
         <div className="mb-5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-indigo-500 sm:text-sm">
           MetaTrader 5 access for modern traders
         </div>
-        <div
+        <h1
           className={`mt-5 max-w-3xl text-center text-2xl min-[450px]:text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-6xl font-medium ${theme === "light" ? "text-[#030D1F]" : "text-white"
             }`}
         >
@@ -104,7 +104,7 @@ export function SparklesPreviewDark() {
             cursorChar="_"
           />{" "}
           from one account.
-        </div>
+        </h1>
         <p className={`mt-3 text-lg font-semibold hidden md:block ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>
           Founded on the principle of radical transparency, PANGAEA is a multi-asset brokerage built for the modern era. We provide a unified gateway to Forex, Commodities, Crypto, Indices, and Stocks.
         </p>

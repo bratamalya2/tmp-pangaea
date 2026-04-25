@@ -79,7 +79,12 @@ export function Header() {
                 onMouseEnter={() => setActiveDropdown(item.title)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="cursor-pointer flex items-center space-x-1 py-2 text-sm font-medium hover:text-indigo-500 transition-colors">
+                <button
+                  type="button"
+                  className="cursor-pointer flex items-center space-x-1 py-2 text-sm font-medium hover:text-indigo-300 transition-colors"
+                  aria-expanded={activeDropdown === item.title}
+                  aria-haspopup="true"
+                >
                   <span>{item.title}</span>
                   <ChevronDown size={14} className={cn("transition-transform duration-200", activeDropdown === item.title && "rotate-180")} />
                 </button>
@@ -115,7 +120,9 @@ export function Header() {
           {/* Right Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <button
+              type="button"
               onClick={toggleTheme}
+              aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
               className={cn(
                 "cursor-pointer p-2 rounded-full transition-all duration-300",
                 theme === "light" ? "hover:bg-zinc-200/20 text-white border border-white" : "hover:bg-zinc-800 text-zinc-100"
@@ -135,7 +142,9 @@ export function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button
+              type="button"
               onClick={toggleTheme}
+              aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
               className={cn(
                 "p-2 rounded-full transition-all duration-300",
                 theme === "light" ? "hover:bg-zinc-200/20 border border-white text-white" : "hover:bg-zinc-800 text-white"
@@ -144,7 +153,11 @@ export function Header() {
               {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
             </button>
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-controls="mobile-navigation"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               className={cn(
                 "p-2 rounded-lg transition-all duration-300",
                 theme === "light" ? "hover:bg-zinc-200/20 text-white" : "hover:bg-zinc-800 text-white"
@@ -157,14 +170,18 @@ export function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={cn(
-        "md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden",
-        mobileMenuOpen ? "max-h-screen border-b shadow-xl" : "max-h-0 border-none"
-      )} style={{ backgroundColor: theme === "light" ? "#020E1E" : "#030D20", borderColor: "#1f2937", color: "#ffffff" }}>
+      <div
+        id="mobile-navigation"
+        className={cn(
+          "md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden",
+          mobileMenuOpen ? "max-h-screen border-b shadow-xl" : "max-h-0 border-none"
+        )}
+        style={{ backgroundColor: theme === "light" ? "#020E1E" : "#030D20", borderColor: "#1f2937", color: "#ffffff" }}
+      >
         <div className="px-4 pt-2 pb-6 space-y-2">
           {menuItems.map((item) => (
             <div key={item.title} className="py-2">
-              <div className="text-xs font-bold uppercase tracking-widest text-zinc-500 px-3 mb-2">{item.title}</div>
+              <div className="text-xs font-bold uppercase tracking-widest text-zinc-300 px-3 mb-2">{item.title}</div>
               <div className="grid grid-cols-1 gap-1">
                 {item.links.map((link) => (
                   <Link

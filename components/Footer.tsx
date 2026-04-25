@@ -68,15 +68,15 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6 opacity-50">
+              <p className="text-sm font-bold uppercase tracking-wider mb-6 text-white/80">
                 {section.title}
-              </h3>
+              </p>
               <ul className="space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm hover:text-indigo-500 transition-colors"
+                      className="text-sm text-white/95 hover:text-indigo-300 transition-colors"
                     >
                       {link.name}
                     </Link>

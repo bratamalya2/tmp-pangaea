@@ -128,3 +128,20 @@
     @apply font-semibold tracking-tight;
   }
 }
+
+.light .text-indigo-500 {
+  color: #4f46e5;
+}
+
+.dark .text-indigo-500 {
+  color: #a5b4fc;
+}
+
+.light .hover\:text-indigo-500:hover {
+  color: #4338ca;
+}
+
+.dark .hover\:text-indigo-500:hover,
+.dark .hover\:text-indigo-400:hover {
+  color: #c7d2fe;
+}

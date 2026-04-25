@@ -259,7 +259,7 @@ className={item.change.startsWith("+")
 
 All images are stored in `public/images/`. Images fall into two categories:
 
-1. **Brand Assets** (manually placed): `logo-dark.jpeg`, `logo-light.jpeg`, `favicon-light.png`, `favicon-dark.png`
+1. **Brand Assets** (manually placed): `logo-dark.png`, `logo-light.png`, `favicon-light.png`, `favicon-dark.png`
 2. **AI-Generated Market Images** (created via image generation tool and copied into public/images): All `*_trading.png`, `*_sidebar.png`, `*_global.png` files
 
 **Unsplash URLs** are used for some background images (in `landing-sections.tsx`). If an Unsplash URL breaks, replace it with an AI-generated image saved to `public/images/`.

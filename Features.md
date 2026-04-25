@@ -44,7 +44,7 @@
 - Help Centre column includes `/pages/introducing-broker`, `/pages/contact-us`, and `/pages/faq`.
 - Legal column links to `/pages/privacy-policy`, `/pages/website-disclaimer`, `/pages/terms-and-conditions`, `/pages/risk-disclosure-statement`, `/pages/kyc-aml-policy`, and `/pages/risk-warning`.
 - **Markets column** links (Forex, Stocks, Indices, Commodities, Crypto) all use `<Link>` from `next/link` for fast SPA transitions.
-- Theme-aware logo: renders `logo-light.jpeg` in light mode and `logo-dark.jpeg` in dark mode.
+- Theme-aware logo: renders `logo-light.png` in light mode and `logo-dark.png` in dark mode.
 - Full **Risk Warning** disclaimer displayed in the footer body.
 - Theme-aware border and background colours via `useTheme()`.
 
@@ -243,8 +243,8 @@ All 5 market pages share a consistent 4-section layout:
 
 | File | Used In |
 |---|---|
-| `logo-dark.jpeg` | Header, Footer (dark mode), GlobalLoader |
-| `logo-light.jpeg` | Footer (light mode) |
+| `logo-dark.png` | Header, Footer (dark mode), GlobalLoader |
+| `logo-light.png` | Footer (light mode) |
 | `favicon-light.png` | Browser tab (light mode) |
 | `favicon-dark.png` | Browser tab (dark mode) |
 | `commodities.png` | MarketsSection Commodities card |

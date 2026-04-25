@@ -81,8 +81,8 @@ export default function ForexPage() {
       <section className="py-24" style={{ backgroundColor: theme === "light" ? "#f9fafb" : "#020813" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Advantage</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-6">Our edge. Your advantage.</h3>
+            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Advantage</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Our edge. Your advantage.</h2>
             <p className="text-lg opacity-70">What makes forex trading with Panagea worth your attention.</p>
           </div>
 
@@ -98,7 +98,7 @@ export default function ForexPage() {
                   style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937", backgroundColor: theme === "light" ? "#ffffff" : "#040404" }}
                 >
                   <div className="text-indigo-500 mb-4">{adv.icon}</div>
-                  <h4 className="text-lg font-bold mb-2">{adv.title}</h4>
+                  <h3 className="text-lg font-bold mb-2">{adv.title}</h3>
                   <p className="opacity-70 leading-relaxed text-sm">{adv.desc}</p>
                 </div>
               ))}
@@ -123,8 +123,8 @@ export default function ForexPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="md:w-1/3 sticky top-32">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Market Movers</h2>
-              <h3 className="text-4xl font-semibold mb-6">Price Drivers</h3>
+              <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Market Movers</p>
+              <h2 className="text-4xl font-semibold mb-6">Price Drivers</h2>
               <p className="text-lg opacity-70 mb-8">Three core forces that move currency pairs and create the opportunities forex traders act on daily.</p>
               
               <div className="rounded-2xl overflow-hidden shadow-xl mb-8 border h-48 relative" style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}>
@@ -151,7 +151,7 @@ export default function ForexPage() {
                     {driver.icon}
                   </div>
                   <div>
-                    <h4 className="text-2xl font-bold mb-3">{driver.title}</h4>
+                    <h3 className="text-2xl font-bold mb-3">{driver.title}</h3>
                     <p className="opacity-70 leading-relaxed">{driver.desc}</p>
                   </div>
                 </div>

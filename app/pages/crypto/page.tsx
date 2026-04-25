@@ -94,8 +94,8 @@ export default function CryptoPage() {
       <section className="py-24" style={{ backgroundColor: colors.background }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-6">Why trade crypto with Pangaea.</h3>
+            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Why trade crypto with Pangaea.</h2>
             <p className="text-lg opacity-70">All the volatility. None of the custody risk. Trade crypto price action as CFDs under a regulated framework.</p>
           </div>
 
@@ -111,7 +111,7 @@ export default function CryptoPage() {
                   style={{ borderColor, backgroundColor: cardBg }}
                 >
                   <div className="text-indigo-500 mb-4">{adv.icon}</div>
-                  <h4 className="text-lg font-bold mb-2">{adv.title}</h4>
+                  <h3 className="text-lg font-bold mb-2">{adv.title}</h3>
                   <p className="opacity-70 leading-relaxed text-sm">{adv.desc}</p>
                 </div>
               ))}
@@ -136,8 +136,8 @@ export default function CryptoPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="md:w-1/3 sticky top-32">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Available Assets</h2>
-              <h3 className="text-4xl font-semibold mb-6">Top Crypto Pairs</h3>
+              <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Available Assets</p>
+              <h2 className="text-4xl font-semibold mb-6">Top Crypto Pairs</h2>
               <p className="text-lg opacity-70 mb-8">
                 From Bitcoin to emerging altcoins — access the most liquid and actively traded digital assets 24 hours a day.
               </p>
@@ -164,7 +164,7 @@ export default function CryptoPage() {
                 >
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <h4 className="text-xl font-bold">{coin.name}</h4>
+                      <h3 className="text-xl font-bold">{coin.name}</h3>
                       <p className="text-xs opacity-60 uppercase tracking-widest mt-0.5 font-mono">{coin.symbol}</p>
                     </div>
                     <span className={`text-sm font-bold px-2 py-1 rounded-full ${coin.change.startsWith("+") ? "bg-emerald-500/20 text-emerald-500" : "bg-red-500/20 text-red-400"}`}>

@@ -94,8 +94,8 @@ export default function CommoditiesPage() {
       <section className="py-24" style={{ backgroundColor: colors.background }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-6">Why trade commodities with Pangaea.</h3>
+            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Why trade commodities with Pangaea.</h2>
             <p className="text-lg opacity-70">Hedge inflation, diversify your portfolio, and capture real-world supply and demand dynamics.</p>
           </div>
 
@@ -111,7 +111,7 @@ export default function CommoditiesPage() {
                   style={{ borderColor, backgroundColor: cardBg }}
                 >
                   <div className="text-indigo-500 mb-4">{adv.icon}</div>
-                  <h4 className="text-lg font-bold mb-2">{adv.title}</h4>
+                  <h3 className="text-lg font-bold mb-2">{adv.title}</h3>
                   <p className="opacity-70 leading-relaxed text-sm">{adv.desc}</p>
                 </div>
               ))}
@@ -136,8 +136,8 @@ export default function CommoditiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="md:w-1/3 sticky top-32">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Available Instruments</h2>
-              <h3 className="text-4xl font-semibold mb-6">Metals & Energy</h3>
+              <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Available Instruments</p>
+              <h2 className="text-4xl font-semibold mb-6">Metals & Energy</h2>
               <p className="text-lg opacity-70 mb-8">
                 From safe-haven gold to volatile crude oil — access the commodities that shape global trade and inflation.
               </p>
@@ -164,7 +164,7 @@ export default function CommoditiesPage() {
                 >
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <h4 className="text-lg font-bold">{item.name}</h4>
+                      <h3 className="text-lg font-bold">{item.name}</h3>
                       <p className="text-xs opacity-60 uppercase tracking-widest mt-0.5">{item.category}</p>
                     </div>
                     <span className={`text-sm font-bold px-2 py-1 rounded-full ${item.change.startsWith("+") ? "bg-emerald-500/20 text-emerald-500" : "bg-red-500/20 text-red-400"}`}>

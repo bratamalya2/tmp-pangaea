@@ -161,9 +161,9 @@ const sectionImages = {
     caption: "Grow from demo practice to professional conditions",
   },
   faq: {
-    src: "/images/crypto_trading.png",
-    alt: "Secure trading workstation with digital market charts",
-    caption: "Verification, support and account rules",
+    src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1400",
+    alt: "Client support team reviewing account verification documents",
+    caption: "Account support, KYC and clear rules",
   },
   cta: {
     src: "/images/indices_trading.png",
@@ -183,20 +183,15 @@ function AccountStatsSectionSkeleton() {
       className="border-y py-8"
       style={{ borderColor: border, backgroundColor: altSurface }}
     >
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_260px] lg:px-8">
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4" aria-hidden="true">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 place-items-center gap-6 text-center lg:grid-cols-4" aria-hidden="true">
           {Array.from({ length: 4 }).map((_, idx) => (
-            <div key={idx}>
+            <div key={idx} className="flex w-full flex-col items-center">
               <div className="mb-3 h-9 w-24 animate-pulse rounded bg-indigo-500/20 md:h-10" />
               <div className="h-3 w-28 animate-pulse rounded" style={{ backgroundColor: mutedPulse }} />
             </div>
           ))}
         </div>
-        <div
-          className="hidden h-28 animate-pulse rounded-2xl lg:block"
-          style={{ backgroundColor: mutedPulse }}
-          aria-hidden="true"
-        />
       </div>
     </section>
   );

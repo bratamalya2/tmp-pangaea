@@ -92,8 +92,8 @@ export default function StocksPage() {
       <section className="py-24" style={{ backgroundColor: colors.background }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-6">Why trade stocks with Pangaea.</h3>
+            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Why trade stocks with Pangaea.</h2>
             <p className="text-lg opacity-70">Everything you need to access global equity markets with confidence and precision.</p>
           </div>
 
@@ -109,7 +109,7 @@ export default function StocksPage() {
                   style={{ borderColor, backgroundColor: cardBg }}
                 >
                   <div className="text-indigo-500 mb-4">{adv.icon}</div>
-                  <h4 className="text-lg font-bold mb-2">{adv.title}</h4>
+                  <h3 className="text-lg font-bold mb-2">{adv.title}</h3>
                   <p className="opacity-70 leading-relaxed text-sm">{adv.desc}</p>
                 </div>
               ))}
@@ -134,8 +134,8 @@ export default function StocksPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="md:w-1/3 sticky top-32">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Market Sectors</h2>
-              <h3 className="text-4xl font-semibold mb-6">Top Sectors to Trade</h3>
+              <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Market Sectors</p>
+              <h2 className="text-4xl font-semibold mb-6">Top Sectors to Trade</h2>
               <p className="text-lg opacity-70 mb-8">From blue-chip technology stocks to energy and healthcare — access every major sector from one account.</p>
 
               <div className="rounded-2xl overflow-hidden shadow-xl mb-8 border h-48 relative" style={{ borderColor }}>
@@ -158,7 +158,7 @@ export default function StocksPage() {
                   className={`p-8 rounded-3xl border bg-gradient-to-r ${sector.color}`}
                   style={{ borderColor }}
                 >
-                  <h4 className="text-2xl font-bold mb-3">{sector.name}</h4>
+                  <h3 className="text-2xl font-bold mb-3">{sector.name}</h3>
                   <p className="opacity-70 leading-relaxed">{sector.desc}</p>
                 </div>
               ))}

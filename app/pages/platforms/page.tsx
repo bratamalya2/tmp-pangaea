@@ -28,7 +28,7 @@ const platforms = [
     title: "MetaTrader 5",
     summary:
       "Use the industry-standard multi-asset terminal for deep charting, automated strategies and precision order management.",
-    image: "/images/indices_trading.png",
+    image: "/images/platform-desktop-generated.png",
     action: "Download MT5",
     tags: ["Expert Advisors", "Algo trading", "Multi-asset", "Advanced charts"],
     devices: ["Windows", "macOS", "iOS", "Android"],
@@ -39,7 +39,7 @@ const platforms = [
     title: "MT5 Web Terminal",
     summary:
       "Trade directly from a modern browser with live prices, charting, order execution and full account access without installing software.",
-    image: "/images/stocks_global_market.png",
+    image: "/images/platform-web-generated.png",
     action: "Open Web Terminal",
     tags: ["No download", "Browser access", "Real-time charts", "Instant execution"],
     devices: ["Chrome", "Safari", "Edge", "Firefox"],
@@ -47,10 +47,10 @@ const platforms = [
   },
   {
     eyebrow: "Coming Soon",
-    title: "Pangaea Trade",
+    title: "Pangaea Mobile",
     summary:
       "A native mobile trading experience for traders who need watchlists, positions and one-tap execution while away from the desk.",
-    image: "/images/crypto_sidebar.png",
+    image: "/images/platform-mobile-generated.png",
     action: "Get Notified",
     tags: ["Live prices", "One-tap trade", "Multi-asset", "Mobile-first"],
     devices: ["iOS", "Android"],
@@ -228,18 +228,56 @@ export default function PlatformsPage() {
         </div>
       </section>
 
-      <section id="platforms" className="py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <section
+        id="platforms"
+        className="relative overflow-hidden border-y py-24"
+        style={{ backgroundColor: altSurface, borderColor: border }}
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/platform-desktop-generated.png')" }}
+          aria-hidden="true"
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                theme === "light"
+                  ? "linear-gradient(135deg, rgba(249,250,251,0.95), rgba(239,246,255,0.78) 48%, rgba(4,13,34,0.22))"
+                  : "linear-gradient(135deg, rgba(2,8,19,0.96), rgba(3,13,32,0.86) 50%, rgba(79,70,229,0.24))",
+            }}
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.16)_44%,transparent_58%)] opacity-60" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-14 flex flex-col justify-between gap-6 rounded-[2rem] border p-6 shadow-2xl backdrop-blur-2xl md:flex-row md:items-end md:p-8"
+            style={{
+              background:
+                theme === "light"
+                  ? "linear-gradient(135deg, rgba(255,255,255,0.68), rgba(255,255,255,0.34))"
+                  : "linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.04))",
+              borderColor: theme === "light" ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.16)",
+              boxShadow:
+                theme === "light"
+                  ? "inset 0 1px 0 rgba(255,255,255,0.9), 0 24px 80px rgba(15,23,42,0.14)"
+                  : "inset 0 1px 0 rgba(255,255,255,0.18), 0 24px 80px rgba(0,0,0,0.32)",
+            }}
+          >
             <div className="max-w-2xl">
               <p className="mb-3 text-sm font-bold uppercase text-indigo-500">One Login</p>
               <h2 className="text-4xl font-semibold md:text-5xl">Choose your trading surface.</h2>
             </div>
-            <p className={cn("max-w-xl text-lg leading-8", muted)}>
+            <p className={cn("max-w-xl text-lg leading-8", theme === "light" ? "text-zinc-700" : "text-zinc-200")}>
               Keep one account, one balance and one execution environment while moving
               between desktop, browser and mobile workflows.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid gap-6 lg:grid-cols-3">
             {platforms.map((platform, index) => {
@@ -251,51 +289,85 @@ export default function PlatformsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className="group overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-                  style={{ backgroundColor: surface, borderColor: border }}
+                  whileHover={{ y: -8, scale: 1.015 }}
+                  className="group relative overflow-hidden rounded-[2rem] border p-1 shadow-2xl backdrop-blur-2xl"
+                  style={{
+                    background:
+                      theme === "light"
+                        ? "linear-gradient(135deg, rgba(255,255,255,0.76), rgba(255,255,255,0.28))"
+                        : "linear-gradient(135deg, rgba(255,255,255,0.13), rgba(255,255,255,0.035))",
+                    borderColor: theme === "light" ? "rgba(255,255,255,0.76)" : "rgba(255,255,255,0.16)",
+                    boxShadow:
+                      theme === "light"
+                        ? "inset 0 1px 0 rgba(255,255,255,0.95), 0 24px 70px rgba(15,23,42,0.16)"
+                        : "inset 0 1px 0 rgba(255,255,255,0.2), 0 24px 70px rgba(0,0,0,0.42)",
+                  }}
                 >
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={platform.image}
-                      alt={`${platform.title} interface`}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#030D20] via-transparent to-transparent" />
-                    <div className="absolute bottom-5 left-5 rounded-full bg-indigo-600 px-4 py-2 text-xs font-bold text-white">
-                      {platform.eyebrow}
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,transparent_0%,rgba(255,255,255,0.32)_34%,transparent_48%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent" />
+                  <div
+                    className="relative h-full overflow-hidden rounded-[1.75rem]"
+                    style={{
+                      background:
+                        theme === "light"
+                          ? "linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.25))"
+                          : "linear-gradient(180deg, rgba(4,13,34,0.5), rgba(4,4,4,0.34))",
+                    }}
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={platform.image}
+                        alt={`${platform.title} interface`}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#030D20]/95 via-[#030D20]/15 to-transparent" />
+                      <div className="absolute bottom-5 left-5 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-xs font-bold text-white shadow-lg backdrop-blur-md">
+                        {platform.eyebrow}
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-7">
-                    <Icon className="mb-5 text-indigo-500" size={34} />
-                    <h3 className="text-2xl font-bold">{platform.title}</h3>
-                    <p className={cn("mt-3 min-h-24 text-sm leading-6", muted)}>{platform.summary}</p>
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {platform.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full border px-3 py-1 text-xs font-semibold"
-                          style={{ borderColor: border }}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-7 border-t pt-5" style={{ borderColor: border }}>
-                      <div className={cn("mb-3 text-xs font-bold uppercase", muted)}>Available on</div>
-                      <div className="flex flex-wrap gap-2">
-                        {platform.devices.map((device) => (
-                          <span key={device} className="text-sm font-semibold">
-                            {device}
+                    <div className="p-7">
+                      <div
+                        className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border backdrop-blur-xl"
+                        style={{
+                          backgroundColor: theme === "light" ? "rgba(255,255,255,0.54)" : "rgba(255,255,255,0.08)",
+                          borderColor: theme === "light" ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.14)",
+                        }}
+                      >
+                        <Icon className="text-indigo-500" size={30} />
+                      </div>
+                      <h3 className="text-2xl font-bold">{platform.title}</h3>
+                      <p className={cn("mt-3 min-h-24 text-sm leading-6", theme === "light" ? "text-zinc-700" : "text-zinc-300")}>{platform.summary}</p>
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {platform.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full border px-3 py-1 text-xs font-semibold backdrop-blur-md"
+                            style={{
+                              borderColor: theme === "light" ? "rgba(255,255,255,0.72)" : "rgba(255,255,255,0.16)",
+                              backgroundColor: theme === "light" ? "rgba(255,255,255,0.42)" : "rgba(255,255,255,0.07)",
+                            }}
+                          >
+                            {tag}
                           </span>
                         ))}
                       </div>
+                      <div className="mt-7 border-t pt-5" style={{ borderColor: theme === "light" ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.12)" }}>
+                        <div className={cn("mb-3 text-xs font-bold uppercase", theme === "light" ? "text-zinc-600" : "text-zinc-400")}>Available on</div>
+                        <div className="flex flex-wrap gap-2">
+                          {platform.devices.map((device) => (
+                            <span key={device} className="text-sm font-semibold">
+                              {device}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <Link
+                        href="#"
+                        className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-indigo-500 transition-colors hover:text-indigo-400"
+                      >
+                        {platform.action} <ArrowRight size={17} />
+                      </Link>
                     </div>
-                    <Link
-                      href="#"
-                      className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-indigo-500 transition-colors hover:text-indigo-400"
-                    >
-                      {platform.action} <ArrowRight size={17} />
-                    </Link>
                   </div>
                 </motion.article>
               );

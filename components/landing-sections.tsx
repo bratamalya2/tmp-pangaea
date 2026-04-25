@@ -225,8 +225,8 @@ export function FeaturesSection() {
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Why Choose Us</h2>
-          <h3 className="text-2xl md:text-5xl font-semibold mb-6">Institutional-grade technology, tailored for retail traders.</h3>
+          <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Why Choose Us</p>
+          <h2 className="text-2xl md:text-5xl font-semibold mb-6">Institutional-grade technology, tailored for retail traders.</h2>
           <p className="text-lg opacity-70">From smart account types to advanced infrastructure — we deliver trading built for performance, trust, and speed.</p>
         </div>
 
@@ -244,7 +244,7 @@ export function FeaturesSection() {
                 <div className="mb-4 p-3 rounded-xl inline-block" style={{ backgroundColor: theme === "light" ? "#f3f4f6" : "#111827" }}>
                   {feature.icon}
                 </div>
-                <h4 className="text-lg font-bold mb-2">{feature.title}</h4>
+                <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                 <p className="opacity-70 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -288,8 +288,8 @@ export function MarketsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Global Markets</h2>
-            <h3 className="text-4xl md:text-5xl font-semibold mb-6">Trade Across Global Markets</h3>
+            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Global Markets</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Trade Across Global Markets</h2>
             <p className="text-lg opacity-70">Diversify your trading portfolio with broad access to global FX, stocks, indices, and commodities, all in one place.</p>
           </div>
           <button className="flex items-center gap-2 font-semibold text-indigo-500 hover:text-indigo-400 transition-colors">
@@ -334,7 +334,7 @@ export function MarketsSection() {
                 </div>
 
                 <div className="flex justify-between items-start mb-6">
-                  <h4 className="text-2xl font-bold">{market.title}</h4>
+                  <h3 className="text-2xl font-bold">{market.title}</h3>
                   <div className="p-2 rounded-full border opacity-0 group-hover:opacity-100 group-hover:bg-indigo-500 group-hover:text-white group-hover:border-indigo-500 transition-all duration-300" style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}>
                     <ChevronRight size={20} />
                   </div>
@@ -389,8 +389,8 @@ export function AccountsSection() {
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Find Your Fit</h2>
-          <h3 className="text-4xl md:text-5xl font-semibold mb-6">Built for every trader.</h3>
+          <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Find Your Fit</p>
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6">Built for every trader.</h2>
           <p className="text-lg opacity-70">Pick your level, match your strategy, and trade without limits.</p>
         </div>
 
@@ -414,7 +414,7 @@ export function AccountsSection() {
                 </div>
               )}
 
-              <h4 className="text-2xl font-bold mb-2">{acc.name}</h4>
+              <h3 className="text-2xl font-bold mb-2">{acc.name}</h3>
               <p className="opacity-70 text-sm mb-8 h-10">{acc.target}</p>
 
               <div className="space-y-4 mb-8">
@@ -486,10 +486,10 @@ export function StepsSection() {
               <div key={idx} className="relative">
                 <div className="text-6xl font-black text-indigo-500/10 absolute -top-6 -left-4 z-0">{step.num}</div>
                 <div className="relative z-10">
-                  <h4 className="text-xl font-bold mb-2 flex items-center gap-3">
+                  <h3 className="text-xl font-bold mb-2 flex items-center gap-3">
                     <span className="w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center text-sm">{idx + 1}</span>
                     {step.title}
-                  </h4>
+                  </h3>
                   <p className="opacity-70 ml-11">{step.desc}</p>
                 </div>
               </div>
