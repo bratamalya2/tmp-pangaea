@@ -1,0 +1,299 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - img "Panagea Logo"
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Panagea Logo" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Panagea Logo" [ref=e7]
+      - navigation [ref=e8]:
+        - button "Trading" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]: Trading
+          - img [ref=e12]
+        - button "Markets" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Markets
+          - img [ref=e17]
+        - button "Resources" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Resources
+          - img [ref=e22]
+        - button "Company" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: Company
+          - img [ref=e27]
+      - generic [ref=e29]:
+        - button [ref=e30] [cursor=pointer]:
+          - img [ref=e31]
+        - link "Login" [ref=e37] [cursor=pointer]:
+          - /url: "#"
+        - link "Register" [ref=e38] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e40]:
+    - generic [ref=e45]:
+      - heading "PANGAEA" [level=1] [ref=e46]
+      - paragraph [ref=e47]: One World. One Market.
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]: < 12ms
+        - generic [ref=e53]: Average Execution
+      - generic [ref=e54]:
+        - generic [ref=e55]: "0.0"
+        - generic [ref=e56]: Starting Spreads
+      - generic [ref=e57]:
+        - generic [ref=e58]: 1000+
+        - generic [ref=e59]: Trading Instruments
+      - generic [ref=e60]:
+        - generic [ref=e61]: 24/7
+        - generic [ref=e62]: Client Support
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - heading "Why Choose Us" [level=2] [ref=e66]
+        - heading "Institutional-grade technology, tailored for retail traders." [level=3] [ref=e67]
+        - paragraph [ref=e68]: From smart account types to advanced infrastructure — we deliver trading built for performance, trust, and speed.
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - img [ref=e73]
+            - heading "Flexible Accounts" [level=4] [ref=e76]
+            - paragraph [ref=e77]: Choose from Standard, Swap-Free, Zero Spread, or 100% Bonus accounts — tailored to your style.
+          - generic [ref=e78]:
+            - img [ref=e80]
+            - heading "Institutional Grade" [level=4] [ref=e82]
+            - paragraph [ref=e83]: Ultra-low latency execution, precision pricing, and 99.9% uptime — built for serious traders.
+          - generic [ref=e84]:
+            - img [ref=e86]
+            - heading "Multi-Platform Access" [level=4] [ref=e88]
+            - paragraph [ref=e89]: MetaTrader 5, WebTrader, or our native mobile app — one account, any device, anywhere.
+          - generic [ref=e90]:
+            - img [ref=e92]
+            - heading "Secure & Regulated" [level=4] [ref=e95]
+            - paragraph [ref=e96]: Client funds held in segregated tier-1 bank accounts with negative balance protection.
+        - img "Stock Market Data" [ref=e99]
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - heading "Global Markets" [level=2] [ref=e104]
+          - heading "Trade Across Global Markets" [level=3] [ref=e105]
+          - paragraph [ref=e106]: Diversify your trading portfolio with broad access to global FX, stocks, indices, and commodities, all in one place.
+        - button "View All Markets" [ref=e107]:
+          - text: View All Markets
+          - img [ref=e108]
+      - generic [ref=e110]:
+        - generic [ref=e111] [cursor=pointer]:
+          - img "Forex" [ref=e113]
+          - generic [ref=e114]:
+            - heading "Forex" [level=4] [ref=e115]
+            - img [ref=e117]
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Trade major, minor, and exotic pairs.
+            - generic [ref=e121]: 70+ Pairs
+        - generic [ref=e122] [cursor=pointer]:
+          - img "Stocks" [ref=e124]
+          - generic [ref=e125]:
+            - heading "Stocks" [level=4] [ref=e126]
+            - img [ref=e128]
+          - generic [ref=e130]:
+            - paragraph [ref=e131]: Invest in leading global companies.
+            - generic [ref=e132]: 500+ Stocks
+        - generic [ref=e133] [cursor=pointer]:
+          - img "Indices" [ref=e135]
+          - generic [ref=e136]:
+            - heading "Indices" [level=4] [ref=e137]
+            - img [ref=e139]
+          - generic [ref=e141]:
+            - paragraph [ref=e142]: Speculate on top market indices.
+            - generic [ref=e143]: 20+ Indices
+        - generic [ref=e144] [cursor=pointer]:
+          - img "Commodities" [ref=e146]
+          - generic [ref=e147]:
+            - heading "Commodities" [level=4] [ref=e148]
+            - img [ref=e150]
+          - generic [ref=e152]:
+            - paragraph [ref=e153]: Trade gold, oil, and more.
+            - generic [ref=e154]: Precious Metals & Energies
+        - generic [ref=e155] [cursor=pointer]:
+          - img "Crypto" [ref=e157]
+          - generic [ref=e158]:
+            - heading "Crypto" [level=4] [ref=e159]
+            - img [ref=e161]
+          - generic [ref=e163]:
+            - paragraph [ref=e164]: Access top crypto assets instantly.
+            - generic [ref=e165]: 50+ Coins
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - heading "Find Your Fit" [level=2] [ref=e169]
+        - heading "Built for every trader." [level=3] [ref=e170]
+        - paragraph [ref=e171]: Pick your level, match your strategy, and trade without limits.
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - heading "Standard" [level=4] [ref=e174]
+          - paragraph [ref=e175]: New traders. Low capital.
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: Min Deposit
+              - generic [ref=e179]: $50
+            - generic [ref=e180]:
+              - generic [ref=e181]: Spreads
+              - generic [ref=e182]: from 1.0 pips
+            - generic [ref=e183]:
+              - generic [ref=e184]: Max Leverage
+              - generic [ref=e185]: 1:500
+            - generic [ref=e186]:
+              - generic [ref=e187]: Commission
+              - generic [ref=e188]: Zero
+          - button "Get Started" [ref=e189]
+        - generic [ref=e190]:
+          - generic [ref=e191]: Most Popular
+          - heading "Advanced" [level=4] [ref=e192]
+          - paragraph [ref=e193]: Active traders demanding better pricing.
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - generic [ref=e196]: Min Deposit
+              - generic [ref=e197]: $500
+            - generic [ref=e198]:
+              - generic [ref=e199]: Spreads
+              - generic [ref=e200]: from 0.5 pips
+            - generic [ref=e201]:
+              - generic [ref=e202]: Max Leverage
+              - generic [ref=e203]: 1:100
+            - generic [ref=e204]:
+              - generic [ref=e205]: Commission
+              - generic [ref=e206]: Zero*
+          - button "Get Started" [ref=e207]
+        - generic [ref=e208]:
+          - heading "Elite" [level=4] [ref=e209]
+          - paragraph [ref=e210]: Pros. High volume. Maximum benefits.
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: Min Deposit
+              - generic [ref=e214]: $10,000
+            - generic [ref=e215]:
+              - generic [ref=e216]: Spreads
+              - generic [ref=e217]: from 0.0 pips
+            - generic [ref=e218]:
+              - generic [ref=e219]: Max Leverage
+              - generic [ref=e220]: 1:100
+            - generic [ref=e221]:
+              - generic [ref=e222]: Commission
+              - generic [ref=e223]: $3 per lot
+          - button "Get Started" [ref=e224]
+    - generic [ref=e226]:
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - heading "Get started in minutes." [level=2] [ref=e229]
+          - paragraph [ref=e230]: Four simple steps to your first trade. Join thousands of traders worldwide who trust Panagea.
+          - button "Create Free Account" [ref=e231]
+        - generic [ref=e232]:
+          - generic [ref=e233]:
+            - generic [ref=e234]: "01"
+            - generic [ref=e235]:
+              - heading "1 Register" [level=4] [ref=e236]:
+                - generic [ref=e237]: "1"
+                - text: Register
+              - paragraph [ref=e238]: Quickly create your account in under 2 minutes.
+          - generic [ref=e239]:
+            - generic [ref=e240]: "02"
+            - generic [ref=e241]:
+              - heading "2 Verify" [level=4] [ref=e242]:
+                - generic [ref=e243]: "2"
+                - text: Verify
+              - paragraph [ref=e244]: Submit your documents for instant AI verification.
+          - generic [ref=e245]:
+            - generic [ref=e246]: "03"
+            - generic [ref=e247]:
+              - heading "3 Fund" [level=4] [ref=e248]:
+                - generic [ref=e249]: "3"
+                - text: Fund
+              - paragraph [ref=e250]: Deposit instantly with 0% fees via crypto or card.
+          - generic [ref=e251]:
+            - generic [ref=e252]: "04"
+            - generic [ref=e253]:
+              - heading "4 Trade" [level=4] [ref=e254]:
+                - generic [ref=e255]: "4"
+                - text: Trade
+              - paragraph [ref=e256]: Access 1,000+ instruments and start trading.
+      - generic [ref=e257]:
+        - img "Trading Platform Dashboard" [ref=e259]
+        - generic [ref=e261]:
+          - heading "Advanced Trading Infrastructure" [level=3] [ref=e262]
+          - paragraph [ref=e263]: Execute trades with millisecond precision across global markets using our state-of-the-art terminal.
+  - contentinfo [ref=e264]:
+    - generic [ref=e265]:
+      - generic [ref=e266]:
+        - generic [ref=e267]:
+          - heading "Trading" [level=3] [ref=e268]
+          - list [ref=e269]:
+            - listitem [ref=e270]:
+              - link "Account Types" [ref=e271] [cursor=pointer]:
+                - /url: /pages/account-types
+            - listitem [ref=e272]:
+              - link "Platforms" [ref=e273] [cursor=pointer]:
+                - /url: /pages/platforms
+            - listitem [ref=e274]:
+              - link "Deposits and Withdrawals" [ref=e275] [cursor=pointer]:
+                - /url: /pages/withdrawal-deposits
+        - generic [ref=e276]:
+          - heading "Markets" [level=3] [ref=e277]
+          - list [ref=e278]:
+            - listitem [ref=e279]:
+              - link "Forex" [ref=e280] [cursor=pointer]:
+                - /url: /pages/forex
+            - listitem [ref=e281]:
+              - link "Stocks" [ref=e282] [cursor=pointer]:
+                - /url: /pages/stocks
+            - listitem [ref=e283]:
+              - link "Indices" [ref=e284] [cursor=pointer]:
+                - /url: /pages/indices
+            - listitem [ref=e285]:
+              - link "Commodities" [ref=e286] [cursor=pointer]:
+                - /url: /pages/commodities
+            - listitem [ref=e287]:
+              - link "Crypto" [ref=e288] [cursor=pointer]:
+                - /url: /pages/crypto
+        - generic [ref=e289]:
+          - heading "Resources" [level=3] [ref=e290]
+          - list [ref=e291]:
+            - listitem [ref=e292]:
+              - link "Economic Calendar" [ref=e293] [cursor=pointer]:
+                - /url: /pages/economical-calendar
+            - listitem [ref=e294]:
+              - link "Trading Calculator" [ref=e295] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e296]:
+              - link "Currency Converter" [ref=e297] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e298]:
+          - heading "Help Centre" [level=3] [ref=e299]
+          - list [ref=e300]:
+            - listitem [ref=e301]:
+              - link "Contact Us" [ref=e302] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e303]:
+              - link "FAQ" [ref=e304] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e305]:
+          - heading "Legal" [level=3] [ref=e306]
+          - list [ref=e307]:
+            - listitem [ref=e308]:
+              - link "Privacy Policy" [ref=e309] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e310]:
+              - link "Website Disclaimer" [ref=e311] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e312]:
+              - link "Terms & Conditions" [ref=e313] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e314]:
+              - link "Risk Disclosure Statement" [ref=e315] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e316]:
+              - link "KYC & AML Policy" [ref=e317] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e318]:
+              - link "Risk Warning" [ref=e319] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e321]:
+        - img "NavionFX Logo" [ref=e322]
+        - paragraph [ref=e323]: "Risk Warning: Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary. It is the responsibility of the Client to ascertain whether he/she is permitted to use the services of NavionFX Limited based on the legal requirements in his/her country of residence."
+        - paragraph [ref=e324]: © 2026 Pangaea United Marketplace. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e330] [cursor=pointer]:
+    - img [ref=e331]
+  - alert [ref=e334]

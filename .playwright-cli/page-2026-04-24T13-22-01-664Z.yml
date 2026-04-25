@@ -1,0 +1,177 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Panagea Logo" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Panagea Logo" [ref=e7]
+      - navigation [ref=e8]:
+        - button "Trading" [ref=e10] [cursor=pointer]:
+          - generic [ref=e11]: Trading
+          - img [ref=e12]
+        - button "Markets" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: Markets
+          - img [ref=e17]
+        - button "Resources" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Resources
+          - img [ref=e22]
+        - button "Company" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: Company
+          - img [ref=e27]
+      - generic [ref=e29]:
+        - button [ref=e30] [cursor=pointer]:
+          - img [ref=e31]
+        - link "Login" [ref=e37] [cursor=pointer]:
+          - /url: "#"
+        - link "Register" [ref=e38] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e40]:
+    - generic [ref=e41]:
+      - heading "Trade Forex" [level=1] [ref=e44]
+      - paragraph [ref=e45]: The Smarter Trade. Experience deep liquidity and precision pricing on 70+ currency pairs.
+      - generic [ref=e46]:
+        - button "Start Trading Now" [ref=e47]
+        - button "Open Demo Account" [ref=e48]
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - heading "Your Advantage" [level=2] [ref=e52]
+        - heading "Our edge. Your advantage." [level=3] [ref=e53]
+        - paragraph [ref=e54]: What makes forex trading with Panagea worth your attention.
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - img [ref=e59]
+            - heading "Currency Pairs" [level=4] [ref=e64]
+            - paragraph [ref=e65]: Majors, minors and exotics. EUR/USD, GBP/JPY, USD/ZAR and dozens more, all in one place with consistent liquidity.
+          - generic [ref=e66]:
+            - img [ref=e68]
+            - heading "Raw Spreads" [level=4] [ref=e70]
+            - paragraph [ref=e71]: Spreads from 0.0 pips on majors like EUR/USD and USD/JPY. No artificial markup, just the interbank rate passed directly to you.
+          - generic [ref=e72]:
+            - img [ref=e74]
+            - heading "Deep Liquidity" [level=4] [ref=e76]
+            - paragraph [ref=e77]: Aggregated pricing from multiple liquidity providers means tighter fills and consistent availability across all pairs.
+          - generic [ref=e78]:
+            - img [ref=e80]
+            - heading "One Account, All Markets" [level=4] [ref=e84]
+            - paragraph [ref=e85]: Your FX positions sit alongside Stocks, Commodities and Indices. Hedge across asset classes from a single dashboard.
+          - generic [ref=e86]:
+            - img [ref=e88]
+            - heading "Transparent Swaps" [level=4] [ref=e92]
+            - paragraph [ref=e93]: Overnight swap rates clearly displayed for every pair before you trade. No hidden charges, no surprises at rollover.
+          - generic [ref=e94]:
+            - img [ref=e96]
+            - heading "Leverage Up to 1:500" [level=4] [ref=e99]
+            - paragraph [ref=e100]: Control larger positions with a fraction of the capital. Flexible leverage available on major pairs for eligible accounts.
+        - img "Institutional Trading Desk" [ref=e103]
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - heading "Market Movers" [level=2] [ref=e109]
+        - heading "Price Drivers" [level=3] [ref=e110]
+        - paragraph [ref=e111]: Three core forces that move currency pairs and create the opportunities forex traders act on daily.
+        - img "Global Macroeconomic Drivers" [ref=e113]
+        - button "Practise with $10k Virtual Funds" [ref=e114]:
+          - text: Practise with $10k Virtual Funds
+          - img [ref=e115]
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - img [ref=e120]
+          - generic [ref=e122]:
+            - heading "Central Bank Policy" [level=4] [ref=e123]
+            - paragraph [ref=e124]: Interest rate decisions from the Fed, ECB, BOE and BOJ are the single biggest driver of currency valuations. Rate hikes strengthen a currency; cuts weaken it.
+        - generic [ref=e125]:
+          - img [ref=e127]
+          - generic [ref=e129]:
+            - heading "Economic Data" [level=4] [ref=e130]
+            - paragraph [ref=e131]: Non-Farm Payrolls, CPI inflation, GDP growth and retail sales reports all cause significant intraday moves. Currencies can move 50-150 pips within minutes.
+        - generic [ref=e132]:
+          - img [ref=e134]
+          - generic [ref=e137]:
+            - heading "Geopolitics & Risk" [level=4] [ref=e138]
+            - paragraph [ref=e139]: Trade wars, elections, conflicts and global risk-off events drive capital flows into safe-haven currencies like USD, CHF and JPY.
+    - generic [ref=e141]:
+      - heading "Make Your Move." [level=2] [ref=e142]
+      - paragraph [ref=e143]: Open a demo account and start exploring forex markets today.
+      - generic [ref=e144]:
+        - button "Open Account" [ref=e145]
+        - button "Start with Demo" [ref=e146]
+  - contentinfo [ref=e147]:
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - heading "Trading" [level=3] [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - link "Account Types" [ref=e154] [cursor=pointer]:
+                - /url: /pages/account-types
+            - listitem [ref=e155]:
+              - link "Platforms" [ref=e156] [cursor=pointer]:
+                - /url: /pages/platforms
+            - listitem [ref=e157]:
+              - link "Deposits and Withdrawals" [ref=e158] [cursor=pointer]:
+                - /url: /pages/withdrawal-deposits
+        - generic [ref=e159]:
+          - heading "Markets" [level=3] [ref=e160]
+          - list [ref=e161]:
+            - listitem [ref=e162]:
+              - link "Forex" [ref=e163] [cursor=pointer]:
+                - /url: /pages/forex
+            - listitem [ref=e164]:
+              - link "Stocks" [ref=e165] [cursor=pointer]:
+                - /url: /pages/stocks
+            - listitem [ref=e166]:
+              - link "Indices" [ref=e167] [cursor=pointer]:
+                - /url: /pages/indices
+            - listitem [ref=e168]:
+              - link "Commodities" [ref=e169] [cursor=pointer]:
+                - /url: /pages/commodities
+            - listitem [ref=e170]:
+              - link "Crypto" [ref=e171] [cursor=pointer]:
+                - /url: /pages/crypto
+        - generic [ref=e172]:
+          - heading "Resources" [level=3] [ref=e173]
+          - list [ref=e174]:
+            - listitem [ref=e175]:
+              - link "Economic Calendar" [ref=e176] [cursor=pointer]:
+                - /url: /pages/economical-calendar
+            - listitem [ref=e177]:
+              - link "Trading Calculator" [ref=e178] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e179]:
+              - link "Currency Converter" [ref=e180] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e181]:
+          - heading "Help Centre" [level=3] [ref=e182]
+          - list [ref=e183]:
+            - listitem [ref=e184]:
+              - link "Contact Us" [ref=e185] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e186]:
+              - link "FAQ" [ref=e187] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e188]:
+          - heading "Legal" [level=3] [ref=e189]
+          - list [ref=e190]:
+            - listitem [ref=e191]:
+              - link "Privacy Policy" [ref=e192] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e193]:
+              - link "Website Disclaimer" [ref=e194] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e195]:
+              - link "Terms & Conditions" [ref=e196] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e197]:
+              - link "Risk Disclosure Statement" [ref=e198] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e199]:
+              - link "KYC & AML Policy" [ref=e200] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e201]:
+              - link "Risk Warning" [ref=e202] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e204]:
+        - img "NavionFX Logo" [ref=e205]
+        - paragraph [ref=e206]: "Risk Warning: Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary. It is the responsibility of the Client to ascertain whether he/she is permitted to use the services of NavionFX Limited based on the legal requirements in his/her country of residence."
+        - paragraph [ref=e207]: © 2026 Pangaea United Marketplace. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e213] [cursor=pointer]:
+    - img [ref=e214]
