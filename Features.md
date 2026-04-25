@@ -29,13 +29,8 @@
 - **Desktop Dropdown Navigation** — Four top-level menu groups with hover-activated dropdowns:
   - **Trading** — Account Types links to `/pages/account-types`, Platforms links to `/pages/platforms`, Deposits and Withdrawals links to `/pages/withdrawal-deposits`
   - **Markets** — Forex, Stocks, Indices, Commodities, Crypto (all linked to live pages)
-<<<<<<< HEAD
   - **Resources** — Economic Calendar links to `/pages/economical-calendar`, Trading Calculator links to `/pages/trading-calculator`, Currency Converter links to `/pages/currency-converter`
   - **Company** — Introducing Broker links to `/pages/introducing-broker`, Contact Us links to `/pages/contact-us`, FAQs links to `/pages/faq`
-=======
-  - **Resources** — Economic Calendar links to `/pages/economical-calendar`; Trading Calculator and Currency Converter are placeholders
-  - **Company** — Introducing Broker, Contact Us, FAQs
->>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
 - **Mobile Hamburger Menu** — Full-screen slide-in menu with `Menu` / `X` icons from `lucide-react`.
 - **Light/Dark Toggle** — Prominent button with white outline in light mode; toggles between `Sun` and `Moon` icons.
 - **Theme-aware text** — All header text is forced white in both light and dark modes for maximum legibility against the dark header background.
@@ -46,11 +41,8 @@
 
 - Five navigation columns: Trading, Markets, Resources, Help Centre, Legal.
 - Trading column includes `/pages/account-types`, `/pages/platforms`, and `/pages/withdrawal-deposits` for fast access to live trading content pages.
-<<<<<<< HEAD
 - Help Centre column includes `/pages/introducing-broker`, `/pages/contact-us`, and `/pages/faq`.
 - Legal column links to `/pages/privacy-policy`, `/pages/website-disclaimer`, `/pages/terms-and-conditions`, `/pages/risk-disclosure-statement`, `/pages/kyc-aml-policy`, and `/pages/risk-warning`.
-=======
->>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
 - **Markets column** links (Forex, Stocks, Indices, Commodities, Crypto) all use `<Link>` from `next/link` for fast SPA transitions.
 - Theme-aware logo: renders `logo-light.jpeg` in light mode and `logo-dark.jpeg` in dark mode.
 - Full **Risk Warning** disclaimer displayed in the footer body.
@@ -186,7 +178,6 @@ All 5 market pages share a consistent 4-section layout:
 - How to Read It section explains release timing, impact levels, actual vs forecast, and currency/market matching.
 - Event coverage checklist and FAQ sections support trader education before news events.
 
-<<<<<<< HEAD
 ### 6.10 Resources Page (`/pages/trading-calculator`)
 - Market-style `SparklesCore` hero with Open Calculator and How It Works CTAs.
 - Interactive calculator for instrument, account currency, direction, lot size, leverage, open price, close price, and swap days.
@@ -226,8 +217,6 @@ All 5 market pages share a consistent 4-section layout:
 - Each legal page uses the current theme system, market-style `SparklesCore` hero, rich policy image, summary highlights, detailed policy sections, related links, and support CTA.
 - Footer Legal links now route to live pages instead of placeholders.
 
-=======
->>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
 ---
 
 ## 7. UI Component Library (`components/ui/`)

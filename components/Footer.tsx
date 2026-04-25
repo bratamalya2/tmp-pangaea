@@ -27,46 +27,27 @@ const footerLinks = [
     title: "Resources",
     links: [
       { name: "Economic Calendar", href: "/pages/economical-calendar" },
-<<<<<<< HEAD
       { name: "Trading Calculator", href: "/pages/trading-calculator" },
       { name: "Currency Converter", href: "/pages/currency-converter" },
-=======
-      { name: "Trading Calculator", href: "#" },
-      { name: "Currency Converter", href: "#" },
->>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
     ],
   },
   {
     title: "Help Centre",
     links: [
-<<<<<<< HEAD
       { name: "Introducing Broker", href: "/pages/introducing-broker" },
       { name: "Contact Us", href: "/pages/contact-us" },
       { name: "FAQ", href: "/pages/faq" },
-=======
-      { name: "Contact Us", href: "#" },
-      { name: "FAQ", href: "#" },
->>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
     ],
   },
   {
     title: "Legal",
     links: [
-<<<<<<< HEAD
       { name: "Privacy Policy", href: "/pages/privacy-policy" },
       { name: "Website Disclaimer", href: "/pages/website-disclaimer" },
       { name: "Terms & Conditions", href: "/pages/terms-and-conditions" },
       { name: "Risk Disclosure Statement", href: "/pages/risk-disclosure-statement" },
       { name: "KYC & AML Policy", href: "/pages/kyc-aml-policy" },
       { name: "Risk Warning", href: "/pages/risk-warning" },
-=======
-      { name: "Privacy Policy", href: "#" },
-      { name: "Website Disclaimer", href: "#" },
-      { name: "Terms & Conditions", href: "#" },
-      { name: "Risk Disclosure Statement", href: "#" },
-      { name: "KYC & AML Policy", href: "#" },
-      { name: "Risk Warning", href: "#" },
->>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
     ],
   },
 ];
