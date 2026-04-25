@@ -1,8 +1,18 @@
 "use client";
 import React, { useRef } from "react";
+import Link from "next/link";
 import { SparklesCore } from "@/components/ui/sparkles"
 import { useTheme } from "@/context/ThemeContext";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Typewriter } from "@/components/ui/typewriter";
+
+const heroTypewriterPhrases = [
+  "forex",
+  "stocks",
+  "indices",
+  "commodities",
+  "crypto",
+];
 
 export function SparklesPreview() {
   const { colors } = useTheme();
@@ -58,7 +68,7 @@ export function SparklesPreviewDark() {
   return (
     <div
       ref={heroRef}
-      className="h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden transition-colors duration-300"
+      className="relative flex min-h-[calc(100svh-5rem)] w-full flex-col items-center justify-center overflow-hidden transition-colors duration-300"
       style={{ backgroundColor: colors.background }}
     >
       <motion.div className="w-full absolute inset-0 h-screen" style={{ y: particleY }}>
@@ -74,17 +84,80 @@ export function SparklesPreviewDark() {
         />
       </motion.div>
       <motion.div
-        className="relative z-20 flex flex-col items-center"
+        className="relative z-20 flex max-w-5xl flex-col items-center px-4 text-center"
         style={{ y: contentY, opacity: contentOpacity }}
       >
+        <div className="mb-5 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-indigo-500">
+          New: Unleash Trading Potential with MetaTrader 5
+        </div>
         <h1
-          className="md:text-7xl text-3xl lg:text-9xl font-bold text-center transition-colors duration-300 text-[#030D1F]"
+          className="text-center text-4xl font-bold leading-none text-[#030D1F] transition-colors duration-300 sm:text-5xl md:text-7xl lg:text-9xl"
           style={{ color: colors.text }}
         >
           PANGAEA
         </h1>
-        <p className={`text-2xl ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>One World. One Market.</p>
+        <p className={`mt-3 text-xl font-semibold md:text-3xl ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>
+          Institutional-grade trading technology for retail traders.
+        </p>
+        <p className={`mt-4 max-w-3xl text-base leading-7 md:text-lg ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
+          Put MetaTrader precision in your hands with fast platform access,
+          multi-asset markets and no-compromise execution tools.
+        </p>
+        <p
+          className={`mt-5 max-w-3xl text-center text-lg font-medium md:text-2xl ${
+            theme === "light" ? "text-[#030D1F]" : "text-white"
+          }`}
+        >
+          Trade{" "}
+          <Typewriter
+            text={heroTypewriterPhrases}
+            speed={70}
+            className="font-bold text-indigo-500"
+            waitTime={1500}
+            deleteSpeed={40}
+            cursorChar="_"
+          />{" "}
+          from one account.
+        </p>
+        <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <Link
+            href="/pages/account-types"
+            className="inline-flex items-center justify-center rounded-full bg-indigo-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-all hover:scale-105 hover:bg-indigo-700"
+          >
+            Start Trading Now
+          </Link>
+          <Link
+            href="/pages/platforms"
+            className="inline-flex items-center justify-center rounded-full border px-8 py-4 text-sm font-bold transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            style={{ borderColor: theme === "light" ? "#d4d4d8" : "#374151" }}
+          >
+            Book a Demo
+          </Link>
+        </div>
       </motion.div>
+    </div>
+  );
+}
+
+export function Preview() {
+  return (
+    <div className="flex h-full w-full flex-row items-start justify-start overflow-hidden bg-background p-16 pt-48 text-2xl font-normal sm:text-3xl md:text-4xl lg:text-5xl">
+      <p className="whitespace-pre-wrap">
+        <span>{"We're born to "}</span>
+        <Typewriter
+          text={[
+            "experience",
+            "trade with clarity",
+            "build confidence",
+            "create better financial habits",
+          ]}
+          speed={70}
+          className="text-indigo-500"
+          waitTime={1500}
+          deleteSpeed={40}
+          cursorChar="_"
+        />
+      </p>
     </div>
   );
 }
