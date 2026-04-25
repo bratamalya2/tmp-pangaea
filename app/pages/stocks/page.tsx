@@ -2,6 +2,7 @@
 
 import { useTheme } from "@/context/ThemeContext";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import {
   TrendingUp, BarChart3, Building2, Globe2,
   ShieldCheck, Zap, ChevronRight
@@ -37,7 +38,7 @@ export default function StocksPage() {
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
       {/* Sparkles Hero Section */}
-      <div className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <div className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticlesstocks"
@@ -70,23 +71,22 @@ export default function StocksPage() {
       </div>
 
       {/* Stats Strip */}
-      <section className="py-12 border-y" style={{ borderColor, backgroundColor: sectionBg }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x" style={{ borderColor }}>
-            {[
-              { value: "500+", label: "Global Stocks" },
-              { value: "< 12ms", label: "Execution Speed" },
-              { value: "1:20", label: "Max Leverage" },
-              { value: "24/5", label: "Market Hours" },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center px-4">
-                <div className="text-3xl md:text-4xl font-black mb-1 text-indigo-500">{stat.value}</div>
-                <div className="text-sm uppercase tracking-widest font-semibold opacity-70">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LazyAnimatedStatsStrip
+        stats={[
+          { value: "500+", label: "Global Stocks" },
+          { value: "< 12ms", label: "Execution Speed" },
+          { value: "1:20", label: "Max Leverage" },
+          { value: "24/5", label: "Market Hours" },
+        ]}
+        border={borderColor}
+        backgroundColor={sectionBg}
+        themeMode={theme}
+        align="center"
+        pyClassName="py-12"
+        gridClassName="grid grid-cols-2 gap-y-10 md:grid-cols-4"
+        valueClassName="mb-1 text-3xl font-black text-indigo-500 md:text-4xl"
+        labelClassName="text-sm font-semibold uppercase tracking-widest opacity-70"
+      />
 
       {/* Advantages Section */}
       <section className="py-24" style={{ backgroundColor: colors.background }}>

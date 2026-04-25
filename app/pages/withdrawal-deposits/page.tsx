@@ -19,6 +19,7 @@ import {
   Zap,
 } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
 
@@ -169,7 +170,7 @@ export default function WithdrawalDepositsPage() {
       className="min-h-screen overflow-x-hidden transition-colors duration-300"
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
-      <section className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <section className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticleswithdrawaldeposits"
@@ -221,22 +222,15 @@ export default function WithdrawalDepositsPage() {
         </motion.div>
       </section>
 
-      <section className="border-y py-8" style={{ backgroundColor: altSurface, borderColor: border }}>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {trustItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div key={item.value} className="flex items-start gap-4">
-                <Icon className="mt-1 text-indigo-500" size={24} />
-                <div>
-                  <div className="text-lg font-bold">{item.value}</div>
-                  <div className={cn("mt-1 text-sm", muted)}>{item.label}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <LazyAnimatedStatsStrip
+        stats={trustItems.map(({ icon, value, label }) => ({ icon, value, label }))}
+        border={border}
+        backgroundColor={altSurface}
+        mutedClassName={muted}
+        themeMode={theme}
+        valueClassName="text-xl font-bold text-indigo-500 md:text-2xl"
+        labelClassName="text-sm"
+      />
 
       <section id="deposit-methods" className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

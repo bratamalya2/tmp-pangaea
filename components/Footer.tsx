@@ -59,9 +59,9 @@ export function Footer() {
     <footer
       className="pt-20 pb-10 transition-colors duration-300 border-t"
       style={{
-        backgroundColor: colors.background,
-        color: colors.text,
-        borderColor: theme === "light" ? "#e5e7eb" : "#1f2937"
+        backgroundColor: theme === "light" ? "#040D22" : colors.background,
+        color: theme === "light" ? "#ffffff" : colors.text,
+        borderColor: theme === "light" ? "#111d35" : "#1f2937"
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +87,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-20 pt-10 border-t opacity-100 text-xs leading-relaxed text-center" style={{ borderColor: theme === "light" ? "#e5e7eb" : "#1f2937" }}>
+        <div className="mt-20 pt-10 border-t opacity-100 text-xs leading-relaxed text-center" style={{ borderColor: theme === "light" ? "#111d35" : "#1f2937" }}>
           <div className="flex flex-col items-center gap-6">
             <img
               src={theme === "light" ? "/images/logo-light.jpeg" : "/images/logo-dark.jpeg"}

@@ -2,6 +2,7 @@
 
 import { useTheme } from "@/context/ThemeContext";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import { 
   Globe2, Zap, Droplet, Layers, Scale, TrendingUp, 
   Landmark, BarChart3, Globe, ChevronRight 
@@ -25,6 +26,8 @@ export default function ForexPage() {
     { icon: <BarChart3 />, title: "Economic Data", desc: "Non-Farm Payrolls, CPI inflation, GDP growth and retail sales reports all cause significant intraday moves. Currencies can move 50-150 pips within minutes." },
     { icon: <Globe />, title: "Geopolitics & Risk", desc: "Trade wars, elections, conflicts and global risk-off events drive capital flows into safe-haven currencies like USD, CHF and JPY." }
   ];
+  const borderColor = theme === "light" ? "#e5e7eb" : "#1f2937";
+  const sectionBg = theme === "light" ? "#f9fafb" : "#020813";
 
   return (
     <main 
@@ -32,7 +35,7 @@ export default function ForexPage() {
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
       {/* Sparkles Hero Section */}
-      <div className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <div className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticlesforex"
@@ -56,6 +59,23 @@ export default function ForexPage() {
           <button className="px-8 py-3 border rounded-full font-bold hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" style={{ borderColor: theme === "light" ? "#e5e7eb" : "#374151" }}>Open Demo Account</button>
         </div>
       </div>
+
+      <LazyAnimatedStatsStrip
+        stats={[
+          { value: "70+", label: "Currency Pairs" },
+          { value: "0.0", label: "Spreads From" },
+          { value: "1:500", label: "Leverage Up To" },
+          { value: "24/5", label: "FX Market Access" },
+        ]}
+        border={borderColor}
+        backgroundColor={sectionBg}
+        themeMode={theme}
+        align="center"
+        pyClassName="py-12"
+        gridClassName="grid grid-cols-2 gap-y-10 md:grid-cols-4"
+        valueClassName="mb-1 text-3xl font-black text-indigo-500 md:text-4xl"
+        labelClassName="text-sm font-semibold uppercase tracking-widest opacity-70"
+      />
 
       {/* Our Edge Section */}
       <section className="py-24" style={{ backgroundColor: theme === "light" ? "#f9fafb" : "#020813" }}>

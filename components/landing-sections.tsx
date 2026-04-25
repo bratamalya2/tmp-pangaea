@@ -226,7 +226,7 @@ export function FeaturesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Why Choose Us</h2>
-          <h3 className="text-4xl md:text-5xl font-semibold mb-6">Institutional-grade technology, tailored for retail traders.</h3>
+          <h3 className="text-2xl md:text-5xl font-semibold mb-6">Institutional-grade technology, tailored for retail traders.</h3>
           <p className="text-lg opacity-70">From smart account types to advanced infrastructure — we deliver trading built for performance, trust, and speed.</p>
         </div>
 
@@ -252,11 +252,11 @@ export function FeaturesSection() {
 
           <div className="lg:w-1/2 w-full">
             <ParallaxImage
-                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1000"
-                alt="Stock Market Data"
-                className="rounded-3xl shadow-2xl h-[500px] border"
-                intensity={70}
-                imageClassName="rounded-3xl"
+              src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1000"
+              alt="Stock Market Data"
+              className="rounded-3xl shadow-2xl h-[500px] border"
+              intensity={70}
+              imageClassName="rounded-3xl"
             />
             <div
               className="pointer-events-none -mt-[500px] h-[500px] rounded-3xl border"
@@ -306,10 +306,10 @@ export function MarketsSection() {
             const isCrypto = market.title === "Crypto";
             const href = isForex ? "/pages/forex"
               : isStocks ? "/pages/stocks"
-              : isIndices ? "/pages/indices"
-              : isCommodities ? "/pages/commodities"
-              : isCrypto ? "/pages/crypto"
-              : null;
+                : isIndices ? "/pages/indices"
+                  : isCommodities ? "/pages/commodities"
+                    : isCrypto ? "/pages/crypto"
+                      : null;
 
             return (
               <div
@@ -323,12 +323,12 @@ export function MarketsSection() {
                 }}
               >
                 <ParallaxImage
-                    src={market.image}
-                    alt={market.title}
-                    className="h-40 w-full mb-6 rounded-xl"
-                    imageClassName="transition-transform duration-500 group-hover:scale-110"
-                    intensity={24}
-                  />
+                  src={market.image}
+                  alt={market.title}
+                  className="h-40 w-full mb-6 rounded-xl"
+                  imageClassName="transition-transform duration-500 group-hover:scale-110"
+                  intensity={24}
+                />
                 <div className="-mt-[184px] h-40 w-full mb-6 rounded-xl overflow-hidden relative pointer-events-none">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
@@ -506,8 +506,8 @@ export function StepsSection() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#030D20] to-transparent opacity-60"></div>
           <div className="absolute bottom-10 left-10 text-white">
-            <h3 className="text-3xl font-bold mb-2">Advanced Trading Infrastructure</h3>
-            <p className="opacity-90 max-w-lg">Execute trades with millisecond precision across global markets using our state-of-the-art terminal.</p>
+            <h3 className="text-2xl md:text-3xl font-bold mb-2">Advanced Trading Infrastructure</h3>
+            <p className="text-sm sm:text-base opacity-90 max-w-lg">Execute trades with millisecond precision across global markets using our state-of-the-art terminal.</p>
           </div>
         </div>
       </div>

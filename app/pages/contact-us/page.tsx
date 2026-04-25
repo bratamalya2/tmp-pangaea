@@ -19,6 +19,7 @@ import {
   Users,
 } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
 
@@ -91,7 +92,7 @@ export default function ContactUsPage() {
       className="min-h-screen overflow-x-hidden transition-colors duration-300"
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
-      <section className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <section className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="absolute inset-0 h-full w-full">
           <SparklesCore
             id="tsparticlescontactus"
@@ -143,21 +144,18 @@ export default function ContactUsPage() {
         </motion.div>
       </section>
 
-      <section className="border-y py-8" style={{ backgroundColor: altSurface, borderColor: border }}>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {[
-            ["24/5", "Market week support"],
-            ["4", "Specialist desks"],
-            ["Secure", "Request routing"],
-            ["Fast", "Callback triage"],
-          ].map(([value, label]) => (
-            <div key={label}>
-              <div className="text-3xl font-bold text-indigo-500 md:text-4xl">{value}</div>
-              <div className={cn("mt-1 text-sm font-medium", muted)}>{label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <LazyAnimatedStatsStrip
+        stats={[
+          { value: "24/5", label: "Market week support" },
+          { value: "4", label: "Specialist desks" },
+          { value: "Secure", label: "Request routing" },
+          { value: "Fast", label: "Callback triage" },
+        ]}
+        border={border}
+        backgroundColor={altSurface}
+        mutedClassName={muted}
+        themeMode={theme}
+      />
 
       <section id="contact-form" className="py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:px-8">

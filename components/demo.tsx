@@ -91,7 +91,7 @@ export function SparklesPreviewDark() {
           MetaTrader 5 access for modern traders
         </div>
         <div
-          className={`mt-5 max-w-3xl text-center text-[14px] min-[450px]:text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium ${theme === "light" ? "text-[#030D1F]" : "text-white"
+          className={`mt-5 max-w-3xl text-center text-2xl min-[450px]:text-lg sm:text-xl md:text-2xl lg:text-3xl 2xl:text-6xl font-medium ${theme === "light" ? "text-[#030D1F]" : "text-white"
             }`}
         >
           Transact{" "}
@@ -105,10 +105,10 @@ export function SparklesPreviewDark() {
           />{" "}
           from one account.
         </div>
-        <p className={`mt-3 text-lg font-semibold ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>
+        <p className={`mt-3 text-lg font-semibold hidden md:block ${theme === "light" ? "text-[#030D1F]" : "text-white"}`}>
           Founded on the principle of radical transparency, PANGAEA is a multi-asset brokerage built for the modern era. We provide a unified gateway to Forex, Commodities, Crypto, Indices, and Stocks.
         </p>
-        <p className={`mt-4 max-w-3xl text-base leading-7 md:text-lg ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
+        <p className={`mt-4 max-w-3xl text-sm leading-7 md:text-lg ${theme === "light" ? "text-zinc-700" : "text-zinc-300"}`}>
           Experience institutional-grade technology, multi-asset market access
           and MetaTrader precision built for retail traders.
         </p>

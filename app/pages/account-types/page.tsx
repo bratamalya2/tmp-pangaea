@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Fragment } from "react";
 import { motion } from "framer-motion";
@@ -19,6 +20,11 @@ import {
 import { SparklesCore } from "@/components/ui/sparkles";
 import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
+
+const AccountStatsSection = dynamic(() => import("./AccountStatsSection"), {
+  ssr: false,
+  loading: () => <AccountStatsSectionSkeleton />,
+});
 
 const accounts = [
   {
@@ -166,6 +172,36 @@ const sectionImages = {
   },
 };
 
+function AccountStatsSectionSkeleton() {
+  const { theme } = useTheme();
+  const border = theme === "light" ? "#e5e7eb" : "#1f2937";
+  const altSurface = theme === "light" ? "#f9fafb" : "#020813";
+  const mutedPulse = theme === "light" ? "#e5e7eb" : "#1f2937";
+
+  return (
+    <section
+      className="border-y py-8"
+      style={{ borderColor: border, backgroundColor: altSurface }}
+    >
+      <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_260px] lg:px-8">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4" aria-hidden="true">
+          {Array.from({ length: 4 }).map((_, idx) => (
+            <div key={idx}>
+              <div className="mb-3 h-9 w-24 animate-pulse rounded bg-indigo-500/20 md:h-10" />
+              <div className="h-3 w-28 animate-pulse rounded" style={{ backgroundColor: mutedPulse }} />
+            </div>
+          ))}
+        </div>
+        <div
+          className="hidden h-28 animate-pulse rounded-2xl lg:block"
+          style={{ backgroundColor: mutedPulse }}
+          aria-hidden="true"
+        />
+      </div>
+    </section>
+  );
+}
+
 function SectionImage({
   src,
   alt,
@@ -201,7 +237,7 @@ export default function AccountTypesPage() {
       className="min-h-screen overflow-x-hidden transition-colors duration-300"
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
-      <section className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <section className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticlesaccounttypes"
@@ -254,24 +290,13 @@ export default function AccountTypesPage() {
         </motion.div>
       </section>
 
-      <section className="border-y py-8" style={{ borderColor: border, backgroundColor: altSurface }}>
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1fr_260px] lg:px-8">
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-            {[
-              ["4", "Account paths"],
-              ["0.0", "Spreads from"],
-              ["1:1000", "Leverage up to"],
-              ["24/5", "Market access"],
-            ].map(([value, label]) => (
-              <div key={label}>
-                <div className="text-3xl font-bold text-indigo-500 md:text-4xl">{value}</div>
-                <div className={cn("mt-1 text-sm font-medium", muted)}>{label}</div>
-              </div>
-            ))}
-          </div>
-          <SectionImage {...sectionImages.stats} className="hidden h-28 lg:block" />
-        </div>
-      </section>
+      <AccountStatsSection
+        border={border}
+        altSurface={altSurface}
+        muted={muted}
+        image={sectionImages.stats}
+        themeMode={theme}
+      />
 
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

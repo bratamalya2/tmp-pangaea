@@ -18,6 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
 
@@ -100,7 +101,7 @@ export default function PlatformsPage() {
       className="min-h-screen overflow-x-hidden transition-colors duration-300"
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
-      <section className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <section className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticlesplatforms"
@@ -152,6 +153,24 @@ export default function PlatformsPage() {
           </Link>
         </motion.div>
       </section>
+
+      <LazyAnimatedStatsStrip
+        stats={[
+          { value: "3", label: "Platform Paths" },
+          { value: "MT5", label: "Trading Terminal" },
+          { value: "Web", label: "Browser Access" },
+          { value: "1,000+", label: "Instruments" },
+        ]}
+        border={border}
+        backgroundColor={altSurface}
+        mutedClassName={muted}
+        themeMode={theme}
+        align="center"
+        pyClassName="py-12"
+        gridClassName="grid grid-cols-2 gap-y-10 md:grid-cols-4"
+        valueClassName="mb-1 text-3xl font-black text-indigo-500 md:text-4xl"
+        labelClassName="text-sm font-semibold uppercase tracking-widest opacity-70"
+      />
 
       <section id="terminal" className="py-24" style={{ backgroundColor: altSurface }}>
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">

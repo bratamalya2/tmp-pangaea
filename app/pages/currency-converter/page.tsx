@@ -21,6 +21,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import { useTheme } from "@/context/ThemeContext";
 import { cn } from "@/lib/utils";
 
@@ -186,7 +187,7 @@ export default function CurrencyConverterPage() {
       className="min-h-screen overflow-x-hidden transition-colors duration-300"
       style={{ backgroundColor: colors.background, color: colors.text }}
     >
-      <section className="min-h-[calc(60vh+6rem)] md:min-h-0 h-[60vh] relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
+      <section className="min-h-screen h-screen relative w-full flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-0">
         <div className="absolute inset-0 h-full w-full">
           <SparklesCore
             id="tsparticlescurrencyconverter"
@@ -238,21 +239,18 @@ export default function CurrencyConverterPage() {
         </motion.div>
       </section>
 
-      <section className="border-y py-8" style={{ backgroundColor: altSurface, borderColor: border }}>
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {[
-            ["11", "Currency references"],
-            ["6", "Popular pairs"],
-            ["0.15%", "Indicative buffer"],
-            ["Instant", "Local conversion"],
-          ].map(([value, label]) => (
-            <div key={label}>
-              <div className="text-3xl font-bold text-indigo-500 md:text-4xl">{value}</div>
-              <div className={cn("mt-1 text-sm font-medium", muted)}>{label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <LazyAnimatedStatsStrip
+        stats={[
+          { value: "11", label: "Currency references" },
+          { value: "6", label: "Popular pairs" },
+          { value: "0.15%", label: "Indicative buffer" },
+          { value: "Instant", label: "Local conversion" },
+        ]}
+        border={border}
+        backgroundColor={altSurface}
+        mutedClassName={muted}
+        themeMode={theme}
+      />
 
       <section id="converter" className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
