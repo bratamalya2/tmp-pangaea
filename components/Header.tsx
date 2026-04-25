@@ -63,7 +63,7 @@ export function Header() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               <img
-                src="/images/logo-dark.jpeg"
+                src="/images/logo-dark.png"
                 alt="Panagea Logo"
                 className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
               />
