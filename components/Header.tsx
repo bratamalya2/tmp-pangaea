@@ -29,16 +29,27 @@ const menuItems = [
     title: "Resources",
     links: [
       { name: "Economic Calendar", href: "/pages/economical-calendar" },
+<<<<<<< HEAD
       { name: "Trading Calculator", href: "/pages/trading-calculator" },
       { name: "Currency Converter", href: "/pages/currency-converter" },
+=======
+      { name: "Trading Calculator", href: "#" },
+      { name: "Currency Converter", href: "#" },
+>>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
     ],
   },
   {
     title: "Company",
     links: [
+<<<<<<< HEAD
       { name: "Introducing Broker (IB)", href: "/pages/introducing-broker" },
       { name: "Contact Us", href: "/pages/contact-us" },
       { name: "FAQs", href: "/pages/faq" },
+=======
+      { name: "Introducing Broker (IB)", href: "#" },
+      { name: "Contact Us", href: "#" },
+      { name: "FAQs", href: "#" },
+>>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
     ],
   },
 ];

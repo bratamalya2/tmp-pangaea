@@ -50,6 +50,7 @@ frontend/
 │       ├── platforms/page.tsx
 │       ├── withdrawal-deposits/page.tsx
 │       ├── economical-calendar/page.tsx
+<<<<<<< HEAD
 │       ├── trading-calculator/page.tsx
 │       ├── currency-converter/page.tsx
 │       ├── introducing-broker/page.tsx
@@ -61,6 +62,8 @@ frontend/
 │       ├── risk-disclosure-statement/page.tsx
 │       ├── kyc-aml-policy/page.tsx
 │       ├── risk-warning/page.tsx
+=======
+>>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
 │       ├── forex/page.tsx
 │       ├── stocks/page.tsx
 │       ├── indices/page.tsx
@@ -294,6 +297,7 @@ When adding a new market or content page:
 
 `/pages/economical-calendar` is a resources page for economic event planning. It uses the market-style `SparklesCore` hero, calendar preview table, filters, impact badges, event education sections, event coverage checklist, FAQs, and final CTA. The route is linked from the Resources menus in both `Header.tsx` and `Footer.tsx`.
 
+<<<<<<< HEAD
 ### 7.5 Trading Calculator Page
 
 `/pages/trading-calculator` is a resources page for pre-trade planning. It uses the market-style `SparklesCore` hero, an interactive calculator for margin, pip value, swap, profit/loss and total estimate, formula notes, workflow cards, FAQs, and final CTA. The route is linked from the Resources menus in both `Header.tsx` and `Footer.tsx`.
@@ -318,6 +322,8 @@ When adding a new market or content page:
 
 The Legal footer column links to six implemented legal pages: `/pages/privacy-policy`, `/pages/website-disclaimer`, `/pages/terms-and-conditions`, `/pages/risk-disclosure-statement`, `/pages/kyc-aml-policy`, and `/pages/risk-warning`. These pages use the shared `app/pages/_components/LegalPage.tsx` shell with market-style `SparklesCore` heroes, photo-led policy summaries, policy detail sections, related page links, and final support CTA.
 
+=======
+>>>>>>> 2b76e00d05e56c1471395b3fd7974c71e2d7e54c
 ---
 
 ## 8. Known Gotchas & Decisions
