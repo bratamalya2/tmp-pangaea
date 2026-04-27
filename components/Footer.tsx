@@ -123,7 +123,7 @@ export function Footer() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <ul className="grid grid-cols-1 gap-2 px-4 pb-4 min-[420px]:grid-cols-2">
+                    <ul className="grid grid-cols-1 gap-2 px-4 pb-4 min-[420px]:grid-cols-2 pt-5">
                       {section.links.map((link) => (
                         <li key={link.name}>
                           <Link
@@ -148,7 +148,7 @@ export function Footer() {
 
         <nav
           aria-label="Footer navigation"
-          className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-10"
+          className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-10 pt-5"
         >
           {footerLinks.map((section) => (
             <div key={section.title}>
