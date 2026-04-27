@@ -46,7 +46,16 @@ const menuItems = [
 export function Header() {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openMobileSections, setOpenMobileSections] = useState<string[]>([]);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleMobileSection = (title: string) => {
+    setOpenMobileSections((current) =>
+      current.includes(title)
+        ? current.filter((sectionTitle) => sectionTitle !== title)
+        : [...current, title]
+    );
+  };
 
   return (
     <header
@@ -174,28 +183,55 @@ export function Header() {
         id="mobile-navigation"
         className={cn(
           "md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden",
-          mobileMenuOpen ? "max-h-screen border-b shadow-xl" : "max-h-0 border-none"
+          mobileMenuOpen ? "max-h-[calc(100vh-5rem)] overflow-y-auto border-b shadow-xl" : "max-h-0 border-none"
         )}
         style={{ backgroundColor: theme === "light" ? "#020E1E" : "#030D20", borderColor: "#1f2937", color: "#ffffff" }}
       >
         <div className="px-4 pt-2 pb-6 space-y-2">
-          {menuItems.map((item) => (
-            <div key={item.title} className="py-2">
-              <div className="text-xs font-bold uppercase tracking-widest text-zinc-300 px-3 mb-2">{item.title}</div>
-              <div className="grid grid-cols-1 gap-1">
-                {item.links.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-base font-medium rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+          {menuItems.map((item) => {
+            const isOpen = openMobileSections.includes(item.title);
+            const panelId = `mobile-nav-${item.title.toLowerCase().replace(/\s+/g, "-")}`;
+
+            return (
+              <div key={item.title} className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
+                <button
+                  type="button"
+                  onClick={() => toggleMobileSection(item.title)}
+                  className="flex w-full items-center justify-between gap-4 px-3 py-3 text-left text-xs font-bold uppercase tracking-widest text-zinc-300"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                >
+                  <span>{item.title}</span>
+                  <ChevronDown
+                    size={16}
+                    className={cn("shrink-0 transition-transform duration-200", isOpen && "rotate-180")}
+                  />
+                </button>
+                <div
+                  id={panelId}
+                  className={cn(
+                    "grid transition-[grid-template-rows] duration-300 ease-out",
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <div className="grid grid-cols-1 gap-1 border-t border-white/10 px-2 py-2">
+                      {item.links.map((link) => (
+                        <Link
+                          key={link.name}
+                          href={link.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block rounded-md px-3 py-2 text-base font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
           <div className="pt-4 flex flex-col space-y-3 px-3">
             <a href="#" className="flex items-center justify-center py-3 text-base font-medium border rounded-xl">Login</a>
             <a href="#" className="flex items-center justify-center py-3 text-base font-bold bg-indigo-600 text-white rounded-xl shadow-lg">Register</a>
