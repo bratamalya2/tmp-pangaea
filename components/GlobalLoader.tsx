@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from "react";
 import LoaderOne from "@/components/ui/loader-one";
-import { useTheme } from "@/context/ThemeContext";
 
 export function GlobalLoader() {
-  const { colors } = useTheme();
   // Start HIDDEN — only reveal after useEffect confirms it's the first visit.
   // On bfcache restores, useEffect does NOT run, so the loader stays hidden.
   const [showLoader, setShowLoader] = useState(false);
@@ -35,7 +33,7 @@ export function GlobalLoader() {
     <div
       className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-none transition-opacity duration-500 ${fadeLoader ? "opacity-0" : "opacity-100"
         }`}
-      style={{ backgroundColor: colors.background }}
+      style={{ backgroundColor: "#030D20" }}
     >
       <img
         src="/images/logo-dark.png"
