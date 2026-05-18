@@ -72,8 +72,8 @@ export function Footer() {
     <footer
       className="pt-20 pb-10 transition-colors duration-300 border-t"
       style={{
-        backgroundColor: theme === "light" ? "#040D22" : colors.background,
-        color: theme === "light" ? "#ffffff" : colors.text,
+        backgroundColor: "#4F46E5",
+        color: "#ffffff",
         borderColor
       }}
     >

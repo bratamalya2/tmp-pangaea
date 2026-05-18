@@ -61,7 +61,7 @@ export function Header() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b"
       style={{
-        backgroundColor: theme === "light" ? "#030D20" : "#030D20E6", // E6 for ~90% opacity
+        backgroundColor: theme === "light" ? "#4F46E5" : "#4F46E5E6",
         borderColor: "#1f2937",
         color: "#ffffff"
       }}
@@ -142,7 +142,8 @@ export function Header() {
             <a href="#" className="text-sm font-medium hover:text-indigo-500 transition-colors">Login</a>
             <a
               href="#"
-              className="px-5 py-2.5 rounded-full bg-indigo-600 text-white text-sm font-bold shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 hover:scale-105 active:scale-95 transition-all"
+              className="px-5 py-2.5 rounded-full text-white text-sm font-bold shadow-lg hover:opacity-90 hover:scale-105 active:scale-95 transition-all"
+              style={{ backgroundColor: "#020C1D" }}
             >
               Register
             </a>
@@ -234,7 +235,7 @@ export function Header() {
           })}
           <div className="pt-4 flex flex-col space-y-3 px-3">
             <a href="#" className="flex items-center justify-center py-3 text-base font-medium border rounded-xl">Login</a>
-            <a href="#" className="flex items-center justify-center py-3 text-base font-bold bg-indigo-600 text-white rounded-xl shadow-lg">Register</a>
+            <a href="#" className="flex items-center justify-center py-3 text-base font-bold text-white rounded-xl shadow-lg" style={{ backgroundColor: "#020C1D" }}>Register</a>
           </div>
         </div>
       </div>
