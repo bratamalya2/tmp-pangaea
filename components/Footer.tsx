@@ -174,7 +174,7 @@ export function Footer() {
         <div className="mt-20 pt-10 border-t opacity-100 text-xs leading-relaxed text-center" style={{ borderColor }}>
           <div className="flex flex-col items-center gap-6">
             <img
-              src={theme === "light" ? "/images/logo-light.png" : "/images/logo-dark.png"}
+              src={"/images/logo-dark.png"}
               alt="Pangaea Logo"
               className="h-12 w-auto opacity-100"
             />
