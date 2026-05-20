@@ -70,9 +70,9 @@ export function Footer() {
 
   return (
     <footer
-      className="pt-20 pb-10 transition-colors duration-300 border-t"
+      className="pt-20 pb-10 transition-colors duration-300"
       style={{
-        backgroundColor: "#4F46E5",
+        backgroundColor: theme === "light" ? "#2b9aadff" : "#ee6b14ff",
         color: "#ffffff",
         borderColor
       }}
@@ -128,12 +128,12 @@ export function Footer() {
                         <li key={link.name}>
                           <Link
                             href={link.href}
-                            className="group flex min-h-11 items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:border-indigo-400 hover:bg-indigo-500/15 hover:text-white"
+                            className="group flex min-h-11 items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:border-blue-500 hover:bg-blue-500/15 hover:text-white"
                           >
                             <span>{link.name}</span>
                             <ChevronDown
                               size={14}
-                              className="-rotate-90 text-white/35 transition-colors group-hover:text-indigo-200"
+                              className="-rotate-90 text-white/35 transition-colors group-hover:text-blue-500"
                             />
                           </Link>
                         </li>
@@ -160,7 +160,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/95 hover:text-indigo-300 transition-colors"
+                      className="text-sm text-white/95 hover:text-blue-500 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -171,7 +171,12 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className="mt-20 pt-10 border-t opacity-100 text-xs leading-relaxed text-center" style={{ borderColor }}>
+        <div className="mt-10 flex flex-col items-center justify-center">
+          <p className="font-semibold text-sm">Registered address:</p>
+          <p className="text-xs font-regular">PangaEA United Markets Limited Reg No. 2026-00328, Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia</p>
+        </div>
+
+        <div className="mt-5 pt-10 border-t opacity-100 text-xs leading-relaxed text-center" style={{ borderColor }}>
           <div className="flex flex-col items-center gap-6">
             <img
               src={"/images/logo-dark.png"}

@@ -27,7 +27,7 @@ const contactChannels = [
   {
     icon: Mail,
     title: "Email Support",
-    value: "support@pangaea.com",
+    value: "support@pangaeamarkets.com",
     desc: "Best for account, document and platform questions.",
   },
   {
@@ -299,9 +299,16 @@ export default function ContactUsPage() {
               Keep account-sensitive details inside official support channels
               and never share passwords, private keys or full card details.
             </p>
-            <div className="mt-8 flex items-center gap-3 rounded-2xl border p-5" style={{ backgroundColor: surface, borderColor: border }}>
-              <MapPin className="shrink-0 text-indigo-500" size={24} />
-              <span className="font-semibold">Global online support for eligible client regions.</span>
+            <div className="mt-8 flex items-start gap-3 rounded-2xl border p-5" style={{ backgroundColor: surface, borderColor: border }}>
+              <MapPin className="shrink-0 text-indigo-500 mt-1" size={24} />
+              <div>
+                <p className="font-bold">PangaEA United Markets Limited</p>
+                <p className={cn("text-sm", muted)}>Reg No. 2026-00328</p>
+                <p className={cn("mt-1 text-sm leading-relaxed", muted)}>
+                  Ground Floor, The Sotheby Building, Rodney Village,<br />
+                  Rodney Bay, Gros-Islet, Saint Lucia
+                </p>
+              </div>
             </div>
           </div>
           <div className="grid gap-5 md:grid-cols-2">

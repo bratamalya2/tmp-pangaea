@@ -292,9 +292,6 @@ export function MarketsSection() {
             <h2 className="text-4xl md:text-5xl font-semibold mb-6">Trade Across Global Markets</h2>
             <p className="text-lg opacity-70">Diversify your trading portfolio with broad access to global FX, stocks, indices, and commodities, all in one place.</p>
           </div>
-          <button className="flex items-center gap-2 font-semibold text-indigo-500 hover:text-indigo-400 transition-colors">
-            View All Markets <ArrowRight size={20} />
-          </button>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

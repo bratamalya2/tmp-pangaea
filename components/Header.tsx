@@ -59,10 +59,9 @@ export function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md"
       style={{
-        backgroundColor: theme === "light" ? "#4F46E5" : "#4F46E5E6",
-        borderColor: "#1f2937",
+        backgroundColor: theme === "light" ? "#2b9aadff" : "#ee6b14ff",
         color: "#ffffff"
       }}
     >
@@ -90,7 +89,7 @@ export function Header() {
               >
                 <button
                   type="button"
-                  className="cursor-pointer flex items-center space-x-1 py-2 text-sm font-medium hover:text-indigo-300 transition-colors"
+                  className="cursor-pointer flex items-center space-x-1 py-2 text-sm font-medium hover:text-blue-500 transition-colors"
                   aria-expanded={activeDropdown === item.title}
                   aria-haspopup="true"
                 >
