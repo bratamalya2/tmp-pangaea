@@ -179,7 +179,7 @@ export function Footer() {
               className="h-12 w-auto opacity-100"
             />
             <p className="max-w-4xl">
-              Risk Warning: Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary. It is the responsibility of the Client to ascertain whether he/she is permitted to use the services of NavionFX Limited based on the legal requirements in his/her country of residence.
+              Risk Warning: Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary. It is the responsibility of the Client to ascertain whether he/she is permitted to use the services of Pangaea United Marketplace Limited based on the legal requirements in his/her country of residence.
             </p>
             <p>
               &copy; {new Date().getFullYear()} Pangaea United Marketplace. All rights reserved.
