@@ -59,10 +59,10 @@ export function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b"
       style={{
-        backgroundColor: theme === "light" ? "#2b9aadff" : "#ee6b14ff",
-        color: "#ffffff"
+        backgroundColor: theme === "light" ? "#ffffff" : "#ffffff",
+        color: "#353535ff"
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -70,10 +70,10 @@ export function Footer() {
 
   return (
     <footer
-      className="pt-20 pb-10 transition-colors duration-300"
+      className="pt-20 pb-10 transition-colors duration-300 border-t"
       style={{
-        backgroundColor: theme === "light" ? "#2b9aadff" : "#ee6b14ff",
-        color: "#ffffff",
+        backgroundColor: theme === "light" ? "#ffffff" : "#ffffff",
+        color: "#000000ff",
         borderColor
       }}
     >
@@ -103,14 +103,14 @@ export function Footer() {
                   aria-controls={panelId}
                 >
                   <span>
-                    <span className="block text-sm font-bold uppercase tracking-wider text-white/90">
+                    <span className="block text-sm font-bold uppercase tracking-wider text-black/90">
                       {section.title}
                     </span>
-                    <span className="mt-1 block text-xs text-white/50">
+                    <span className="mt-1 block text-xs text-black/50">
                       {section.links.length} links
                     </span>
                   </span>
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-black/80">
                     {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                   </span>
                 </button>
@@ -128,12 +128,12 @@ export function Footer() {
                         <li key={link.name}>
                           <Link
                             href={link.href}
-                            className="group flex min-h-11 items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:border-blue-500 hover:bg-blue-500/15 hover:text-white"
+                            className="group flex min-h-11 items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.03] px-3 py-2.5 text-sm font-medium text-black/90 transition-colors hover:border-blue-500 hover:bg-blue-500/15 hover:text-black"
                           >
                             <span>{link.name}</span>
                             <ChevronDown
                               size={14}
-                              className="-rotate-90 text-white/35 transition-colors group-hover:text-blue-500"
+                              className="-rotate-90 text-black/35 transition-colors group-hover:text-blue-500"
                             />
                           </Link>
                         </li>
@@ -152,7 +152,7 @@ export function Footer() {
         >
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <p className="text-sm font-bold uppercase tracking-wider mb-6 text-white/80">
+              <p className="text-sm font-bold uppercase tracking-wider mb-6 text-black/80">
                 {section.title}
               </p>
               <ul className="space-y-4">
@@ -160,7 +160,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/95 hover:text-blue-500 transition-colors"
+                      className="text-sm text-black/95 hover:text-blue-500 transition-colors"
                     >
                       {link.name}
                     </Link>
