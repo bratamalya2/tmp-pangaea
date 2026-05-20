@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-Content \"c:\\\\Bratamalya\\\\tmp-pangaea\\\\node_modules\\\\shadcn\\\\package.json\")",
+      "Bash(Select-String -Pattern \"tailwind|exports|css\")",
+      "Bash(python3 -c \"import json,sys; p=json.load\\(sys.stdin\\); print\\('version:', p['version']\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@tailwindcss/postcss/package.json'\\); console.log\\('postcss version:', p.version\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/next/package.json'\\); console.log\\('next version:', p.version\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/lightningcss/package.json'\\); console.log\\('lightningcss version:', p.version\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@tailwindcss/postcss/package.json'\\); console.log\\(JSON.stringify\\(p.dependencies || {}, null, 2\\)\\)\")",
+      "Bash(node -e \"try { require\\('./node_modules/@tailwindcss/postcss'\\) } catch\\(e\\) { console.log\\('ERROR:', e.message\\) }\")",
+      "Bash(node --input-type=module -e \"import p from './node_modules/@tailwindcss/postcss/package.json' assert {type:'json'}; console.log\\(p.exports\\)\")",
+      "Bash(node -e \"const p=require\\('./node_modules/@tailwindcss/oxide/package.json'\\); console.log\\('oxide version:', p.version, '\\\\noptionalDeps:', JSON.stringify\\(p.optionalDependencies || {}\\)\\)\")",
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Bratamalya\\\\tmp-pangaea\\\\.next\")"
+    ]
+  }
+}
