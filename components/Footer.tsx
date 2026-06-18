@@ -47,7 +47,10 @@ const footerLinks = [
       { name: "Privacy Policy", href: "/pages/privacy-policy" },
       { name: "Website Disclaimer", href: "/pages/website-disclaimer" },
       { name: "Terms & Conditions", href: "/pages/terms-and-conditions" },
-      { name: "Risk Disclosure Statement", href: "/pages/risk-disclosure-statement" },
+      {
+        name: "Risk Disclosure Statement",
+        href: "/pages/risk-disclosure-statement",
+      },
       { name: "KYC & AML Policy", href: "/pages/kyc-aml-policy" },
       { name: "Risk Warning", href: "/pages/risk-warning" },
     ],
@@ -64,7 +67,7 @@ export function Footer() {
     setOpenSections((current) =>
       current.includes(title)
         ? current.filter((sectionTitle) => sectionTitle !== title)
-        : [...current, title]
+        : [...current, title],
     );
   };
 
@@ -74,14 +77,11 @@ export function Footer() {
       style={{
         backgroundColor: theme === "light" ? "#ffffff" : "#ffffff",
         color: "#000000ff",
-        borderColor
+        borderColor,
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav
-          aria-label="Footer navigation"
-          className="md:hidden space-y-3"
-        >
+        <nav aria-label="Footer navigation" className="md:hidden space-y-3">
           {footerLinks.map((section) => {
             const isOpen = openSections.includes(section.title);
             const panelId = `footer-${section.title.toLowerCase().replace(/\s+/g, "-")}`;
@@ -91,7 +91,7 @@ export function Footer() {
                 key={section.title}
                 className={cn(
                   "overflow-hidden rounded-lg border transition-colors",
-                  isOpen ? "bg-white/8" : "bg-white/[0.03]"
+                  isOpen ? "bg-white/8" : "bg-white/[0.03]",
                 )}
                 style={{ borderColor }}
               >
@@ -119,7 +119,7 @@ export function Footer() {
                   id={panelId}
                   className={cn(
                     "grid border-t border-white/10 transition-[grid-template-rows] duration-300 ease-out",
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
                   )}
                 >
                   <div className="overflow-hidden">
@@ -173,10 +173,17 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-center">
           <p className="font-semibold text-sm">Registered address:</p>
-          <p className="text-xs font-regular">PangaEA United Markets Limited Reg No. 2026-00328, Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint Lucia</p>
+          <p className="text-xs font-regular">
+            Pangaea United Markets Limited Reg No. 2026-00328, Ground Floor, The
+            Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint
+            Lucia
+          </p>
         </div>
 
-        <div className="mt-5 pt-10 border-t opacity-100 text-xs leading-relaxed text-center" style={{ borderColor }}>
+        <div
+          className="mt-5 pt-10 border-t opacity-100 text-xs leading-relaxed text-center"
+          style={{ borderColor }}
+        >
           <div className="flex flex-col items-center gap-6">
             <img
               src={"/images/logo-dark.png"}
@@ -184,10 +191,57 @@ export function Footer() {
               className="h-12 w-auto opacity-100"
             />
             <p className="max-w-4xl">
-              Risk Warning: Trading Forex and Leveraged Financial Instruments involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary. It is the responsibility of the Client to ascertain whether he/she is permitted to use the services of Pangaea United Marketplace Limited based on the legal requirements in his/her country of residence.
+              Risk statement: An investment in derivatives may mean investors
+              may lose an amount even greater than their original investment.
+              Anyone wishing to invest in any of the products mentioned in{" "}
+              <span className="text-red-500 font-medium">
+                https://leafy-quokka-85961e.netlify.app
+              </span>{" "}
+              should seek their own financial or professional advice. Trading of
+              securities, forex, stock market, commodities, options and futures
+              may not be suitable for everyone and involves the risk of losing
+              part or all of your money. Trading in the financial markets has
+              large potential rewards, but also large potential risk. You must
+              be aware of the risks and be willing to accept them in order to
+              invest in the markets. Don't invest and trade with money which you
+              can't afford to lose. Forex Trading are not allowed in some
+              countries, before investing your money, make sure whether your
+              country is allowing this or not.
+            </p>{" "}
+            <p className="max-w-4xl">
+              You are strongly advised to obtain independent financial, legal
+              and tax advice before proceeding with any currency or spot metals
+              trade. Nothing in this site should be read or construed as
+              constituting advice on the part of{" "}
+              <span className="text-red-500 font-medium">
+                Pangaea United Markets Limited
+              </span>{" "}
+              or any of its affiliates, directors, officers or employees.
+            </p>
+            <p className="max-w-4xl">
+              Restricted Regions:{" "}
+              <span className="text-red-500 font-medium">
+                Pangaea United Markets Limited
+              </span>{" "}
+              does not provide services for citizens/residents of the United
+              States, Cuba, Iraq, Myanmar, North Korea, Sudan, United Arab
+              Emirates and India. The services of{" "}
+              <span className="text-red-500 font-medium">
+                Pangaea United Markets Limited
+              </span>{" "}
+              are not intended for distribution to, or use by, any person in any
+              country or jurisdiction where such distribution or use would be
+              contrary to local law or regulation.
+            </p>
+            <p className="max-w-4xl">OR</p>
+            <p className="italic max-w-4xl">
+              Information on this site is not directed at residents in any
+              country or jurisdiction where such distribution or use would be
+              contrary to local law or regulation.
             </p>
             <p>
-              &copy; {new Date().getFullYear()} Pangaea United Marketplace. All rights reserved.
+              &copy; {new Date().getFullYear()} Pangaea United Markets Limited.
+              All rights reserved.
             </p>
           </div>
         </div>
