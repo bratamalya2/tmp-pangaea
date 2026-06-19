@@ -174,9 +174,7 @@ export function Footer() {
         <div className="mt-10 flex flex-col items-center justify-center">
           <p className="font-semibold text-sm">Registered address:</p>
           <p className="text-xs font-regular">
-            Pangaea United Markets Limited Reg No. 2026-00328, Ground Floor, The
-            Sotheby Building, Rodney Village, Rodney Bay, Gros-Islet, Saint
-            Lucia
+            Lot 12, Office No. 2, St John's Street, Gros Islet, Saint Lucia
           </p>
         </div>
 
@@ -195,7 +193,7 @@ export function Footer() {
               may lose an amount even greater than their original investment.
               Anyone wishing to invest in any of the products mentioned in{" "}
               <span className="text-red-500 font-medium">
-                https://leafy-quokka-85961e.netlify.app
+                https://pangaeamarkets.com
               </span>{" "}
               should seek their own financial or professional advice. Trading of
               securities, forex, stock market, commodities, options and futures

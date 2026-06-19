@@ -38,9 +38,9 @@ const contactChannels = [
   },
   {
     icon: Phone,
-    title: "Call Back",
-    value: "Request a call",
-    desc: "Ask for a callback from support, sales or partnerships.",
+    title: "Call Us",
+    value: "Make a call",
+    desc: "+1-758-485-6467",
   },
   {
     icon: Globe2,
@@ -160,14 +160,21 @@ export default function ContactUsPage() {
       <section id="contact-form" className="py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start lg:px-8">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">Contact Desk</p>
-            <h2 className="text-4xl font-semibold md:text-5xl">Tell us what you need help with.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
+              Contact Desk
+            </p>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              Tell us what you need help with.
+            </h2>
             <p className={cn("mt-6 text-lg leading-8", muted)}>
               Send one request and route it to support, compliance, trading
               services or partnerships. The form is local for now and ready for
               backend wiring later.
             </p>
-            <div className="mt-8 overflow-hidden rounded-2xl border shadow-2xl" style={{ borderColor: border }}>
+            <div
+              className="mt-8 overflow-hidden rounded-2xl border shadow-2xl"
+              style={{ borderColor: border }}
+            >
               <img
                 src="/images/stocks_global_market.png"
                 alt="Global support team monitoring market requests"
@@ -261,11 +268,19 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      <section id="support" className="border-y py-24" style={{ backgroundColor: altSurface, borderColor: border }}>
+      <section
+        id="support"
+        className="border-y py-24"
+        style={{ backgroundColor: altSurface, borderColor: border }}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-14 max-w-3xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">Support Desks</p>
-            <h2 className="text-4xl font-semibold md:text-5xl">Route questions to the right team.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
+              Support Desks
+            </p>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              Route questions to the right team.
+            </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {departments.map((department, index) => {
@@ -282,7 +297,9 @@ export default function ContactUsPage() {
                 >
                   <Icon className="mb-6 text-indigo-500" size={34} />
                   <h3 className="text-xl font-bold">{department.title}</h3>
-                  <p className={cn("mt-3 text-sm leading-6", muted)}>{department.desc}</p>
+                  <p className={cn("mt-3 text-sm leading-6", muted)}>
+                    {department.desc}
+                  </p>
                 </motion.article>
               );
             })}
@@ -293,20 +310,28 @@ export default function ContactUsPage() {
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">Contact Channels</p>
-            <h2 className="text-4xl font-semibold md:text-5xl">Choose the channel that fits the request.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
+              Contact Channels
+            </p>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              Choose the channel that fits the request.
+            </h2>
             <p className={cn("mt-6 text-lg leading-8", muted)}>
               Keep account-sensitive details inside official support channels
               and never share passwords, private keys or full card details.
             </p>
-            <div className="mt-8 flex items-start gap-3 rounded-2xl border p-5" style={{ backgroundColor: surface, borderColor: border }}>
+            <div
+              className="mt-8 flex items-start gap-3 rounded-2xl border p-5"
+              style={{ backgroundColor: surface, borderColor: border }}
+            >
               <MapPin className="shrink-0 text-indigo-500 mt-1" size={24} />
               <div>
                 <p className="font-bold">PangaEA United Markets Limited</p>
                 <p className={cn("text-sm", muted)}>Reg No. 2026-00328</p>
                 <p className={cn("mt-1 text-sm leading-relaxed", muted)}>
-                  Ground Floor, The Sotheby Building, Rodney Village,<br />
-                  Rodney Bay, Gros-Islet, Saint Lucia
+                  Lot 12, Office No. 2, St John's Street
+                  <br />
+                  Gros Islet, Saint Lucia
                 </p>
               </div>
             </div>
@@ -315,11 +340,19 @@ export default function ContactUsPage() {
             {contactChannels.map((channel) => {
               const Icon = channel.icon;
               return (
-                <div key={channel.title} className="rounded-2xl border p-6" style={{ backgroundColor: surface, borderColor: border }}>
+                <div
+                  key={channel.title}
+                  className="rounded-2xl border p-6"
+                  style={{ backgroundColor: surface, borderColor: border }}
+                >
                   <Icon className="mb-5 text-indigo-500" size={30} />
                   <h3 className="text-xl font-bold">{channel.title}</h3>
-                  <div className="mt-2 font-semibold text-indigo-500">{channel.value}</div>
-                  <p className={cn("mt-3 text-sm leading-6", muted)}>{channel.desc}</p>
+                  <div className="mt-2 font-semibold text-indigo-500">
+                    {channel.value}
+                  </div>
+                  <p className={cn("mt-3 text-sm leading-6", muted)}>
+                    {channel.desc}
+                  </p>
                 </div>
               );
             })}
@@ -327,10 +360,15 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      <section className="py-24 text-center" style={{ backgroundColor: altSurface }}>
+      <section
+        className="py-24 text-center"
+        style={{ backgroundColor: altSurface }}
+      >
         <div className="mx-auto max-w-3xl px-4">
           <Clock3 className="mx-auto mb-6 text-indigo-500" size={44} />
-          <h2 className="text-4xl font-bold md:text-5xl">Need a faster answer?</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">
+            Need a faster answer?
+          </h2>
           <p className={cn("mx-auto mt-5 max-w-2xl text-lg leading-8", muted)}>
             Check the FAQ first for account, funding, platform and verification
             guidance, then contact us if you need a desk to review your request.
