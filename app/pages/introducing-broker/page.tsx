@@ -45,7 +45,7 @@ const benefits = [
   {
     icon: ShieldCheck,
     title: "Compliance First",
-    desc: "Operate with onboarding, KYC and risk messaging aligned with regulated financial promotion standards.",
+    desc: "Operate with onboarding, KYC and risk messaging aligned with secured financial promotion standards.",
   },
   {
     icon: Globe2,
@@ -159,15 +159,25 @@ export default function IntroducingBrokerPage() {
             <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
               Partnership Program
             </p>
-            <h2 className="text-4xl font-semibold md:text-5xl">Turn trader relationships into a structured business.</h2>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              Turn trader relationships into a structured business.
+            </h2>
             <p className={cn("mt-6 text-lg leading-8", muted)}>
               The IB program is designed for educators, signal communities,
               affiliates, trading offices and regional partners who need a
               professional broker relationship behind their client network.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {["Dedicated partner manager", "Transparent tracking", "Client-ready onboarding", "Marketing guidance"].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-sm font-semibold">
+              {[
+                "Dedicated partner manager",
+                "Transparent tracking",
+                "Client-ready onboarding",
+                "Marketing guidance",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 text-sm font-semibold"
+                >
                   <Check className="text-emerald-500" size={18} />
                   {item}
                 </div>
@@ -199,17 +209,27 @@ export default function IntroducingBrokerPage() {
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-bold backdrop-blur-md">
                 <Handshake size={16} /> Partner desk
               </div>
-              <h3 className="max-w-xl text-3xl font-bold">Built for relationship-led growth.</h3>
+              <h3 className="max-w-xl text-3xl font-bold">
+                Built for relationship-led growth.
+              </h3>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section id="benefits" className="border-y py-24" style={{ backgroundColor: altSurface, borderColor: border }}>
+      <section
+        id="benefits"
+        className="border-y py-24"
+        style={{ backgroundColor: altSurface, borderColor: border }}
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-14 max-w-3xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">Benefits</p>
-            <h2 className="text-4xl font-semibold md:text-5xl">A partner framework with commercial clarity.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
+              Benefits
+            </p>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              A partner framework with commercial clarity.
+            </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((item, index) => {
@@ -226,7 +246,9 @@ export default function IntroducingBrokerPage() {
                 >
                   <Icon className="mb-6 text-indigo-500" size={34} />
                   <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className={cn("mt-3 text-sm leading-6", muted)}>{item.desc}</p>
+                  <p className={cn("mt-3 text-sm leading-6", muted)}>
+                    {item.desc}
+                  </p>
                 </motion.article>
               );
             })}
@@ -237,14 +259,21 @@ export default function IntroducingBrokerPage() {
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">Partner Toolkit</p>
-            <h2 className="text-4xl font-semibold md:text-5xl">Everything needed to refer with confidence.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
+              Partner Toolkit
+            </p>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              Everything needed to refer with confidence.
+            </h2>
             <p className={cn("mt-6 text-lg leading-8", muted)}>
               Give your clients a clear account path while your team gets the
               tools to monitor growth, answer product questions and manage
               partner activity.
             </p>
-            <div className="mt-8 overflow-hidden rounded-2xl border shadow-2xl" style={{ borderColor: border }}>
+            <div
+              className="mt-8 overflow-hidden rounded-2xl border shadow-2xl"
+              style={{ borderColor: border }}
+            >
               <img
                 src="/images/forex_trading_desk.png"
                 alt="Trading desk partner dashboard"
@@ -255,7 +284,11 @@ export default function IntroducingBrokerPage() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {toolkit.map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-2xl border p-5" style={{ backgroundColor: surface, borderColor: border }}>
+              <div
+                key={item}
+                className="flex items-center gap-3 rounded-2xl border p-5"
+                style={{ backgroundColor: surface, borderColor: border }}
+              >
                 <Check className="shrink-0 text-emerald-500" size={20} />
                 <span className="font-semibold">{item}</span>
               </div>
@@ -264,11 +297,18 @@ export default function IntroducingBrokerPage() {
         </div>
       </section>
 
-      <section className="border-y py-24" style={{ backgroundColor: altSurface, borderColor: border }}>
+      <section
+        className="border-y py-24"
+        style={{ backgroundColor: altSurface, borderColor: border }}
+      >
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">How It Works</p>
-            <h2 className="text-4xl font-semibold md:text-5xl">From application to active referrals.</h2>
+            <p className="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-500">
+              How It Works
+            </p>
+            <h2 className="text-4xl font-semibold md:text-5xl">
+              From application to active referrals.
+            </h2>
             <p className={cn("mt-6 text-lg leading-8", muted)}>
               The onboarding path is designed to be clear for partners and safe
               for clients from the first conversation.
@@ -298,7 +338,9 @@ export default function IntroducingBrokerPage() {
       <section className="py-24 text-center">
         <div className="mx-auto max-w-3xl px-4">
           <Users className="mx-auto mb-6 text-indigo-500" size={44} />
-          <h2 className="text-4xl font-bold md:text-5xl">Build your partner channel with Pangaea.</h2>
+          <h2 className="text-4xl font-bold md:text-5xl">
+            Build your partner channel with Pangaea.
+          </h2>
           <p className={cn("mx-auto mt-5 max-w-2xl text-lg leading-8", muted)}>
             Speak with our partnerships desk and explore the model that fits
             your audience, region and trading community.

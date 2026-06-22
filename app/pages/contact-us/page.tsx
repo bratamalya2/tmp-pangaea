@@ -327,9 +327,11 @@ export default function ContactUsPage() {
               <MapPin className="shrink-0 text-indigo-500 mt-1" size={24} />
               <div>
                 <p className="font-bold">PangaEA United Markets Limited</p>
-                <p className={cn("text-sm", muted)}>Reg No. 2026-00328</p>
+                <p className={cn("text-sm", muted)}>
+                  Ground Floor, The Sotheby Building
+                </p>
                 <p className={cn("mt-1 text-sm leading-relaxed", muted)}>
-                  Lot 12, Office No. 2, St John's Street
+                  Rodney Village, Rodney Bay
                   <br />
                   Gros Islet, Saint Lucia
                 </p>

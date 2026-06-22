@@ -174,7 +174,8 @@ export function Footer() {
         <div className="mt-10 flex flex-col items-center justify-center">
           <p className="font-semibold text-sm">Registered address:</p>
           <p className="text-xs font-regular">
-            Lot 12, Office No. 2, St John's Street, Gros Islet, Saint Lucia
+            Ground Floor, The Sotheby Building, Rodney Village, Rodney Bay,
+            Gros-Islet, Saint Lucia
           </p>
         </div>
 

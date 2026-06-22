@@ -4,8 +4,13 @@ import { useTheme } from "@/context/ThemeContext";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { LazyAnimatedStatsStrip } from "@/components/LazyAnimatedStatsStrip";
 import {
-  TrendingUp, BarChart3, Building2, Globe2,
-  ShieldCheck, Zap, ChevronRight
+  TrendingUp,
+  BarChart3,
+  Building2,
+  Globe2,
+  ShieldCheck,
+  Zap,
+  ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -13,19 +18,59 @@ export default function StocksPage() {
   const { colors, theme } = useTheme();
 
   const advantages = [
-    { icon: <Building2 />, title: "500+ Global Equities", desc: "Access shares from the NYSE, NASDAQ, LSE, and other top global exchanges in one unified account." },
-    { icon: <TrendingUp />, title: "Real-Time Pricing", desc: "Live bid/ask pricing with no re-quotes. What you see is what you get, every time." },
-    { icon: <BarChart3 />, title: "Advanced Charting", desc: "Full suite of technical indicators and drawing tools built into MT5 for deep market analysis." },
-    { icon: <Globe2 />, title: "Multi-Market Access", desc: "Trade US, UK, European, and Asian equities from a single account without any currency conversion hassle." },
-    { icon: <ShieldCheck />, title: "Regulated & Secure", desc: "All stock CFD trades are executed under a fully regulated framework with segregated client funds." },
-    { icon: <Zap />, title: "Instant Execution", desc: "Market orders filled in milliseconds. Stop-loss and take-profit orders supported on every instrument." },
+    {
+      icon: <Building2 />,
+      title: "500+ Global Equities",
+      desc: "Access shares from the NYSE, NASDAQ, LSE, and other top global exchanges in one unified account.",
+    },
+    {
+      icon: <TrendingUp />,
+      title: "Real-Time Pricing",
+      desc: "Live bid/ask pricing with no re-quotes. What you see is what you get, every time.",
+    },
+    {
+      icon: <BarChart3 />,
+      title: "Advanced Charting",
+      desc: "Full suite of technical indicators and drawing tools built into MT5 for deep market analysis.",
+    },
+    {
+      icon: <Globe2 />,
+      title: "Multi-Market Access",
+      desc: "Trade US, UK, European, and Asian equities from a single account without any currency conversion hassle.",
+    },
+    {
+      icon: <ShieldCheck />,
+      title: "Secure",
+      desc: "All stock CFD trades are executed under a fully secure framework with segregated client funds.",
+    },
+    {
+      icon: <Zap />,
+      title: "Instant Execution",
+      desc: "Market orders filled in milliseconds. Stop-loss and take-profit orders supported on every instrument.",
+    },
   ];
 
   const sectors = [
-    { name: "Technology", desc: "Apple, Microsoft, NVIDIA, and hundreds more leading tech giants.", color: "from-blue-500/20 to-indigo-500/20" },
-    { name: "Energy", desc: "ExxonMobil, Shell, BP and the world's largest energy producers.", color: "from-yellow-500/20 to-orange-500/20" },
-    { name: "Healthcare", desc: "Johnson & Johnson, Pfizer, UnitedHealth, and global pharma leaders.", color: "from-green-500/20 to-teal-500/20" },
-    { name: "Finance", desc: "JPMorgan, Goldman Sachs, Berkshire Hathaway, and major banks.", color: "from-purple-500/20 to-pink-500/20" },
+    {
+      name: "Technology",
+      desc: "Apple, Microsoft, NVIDIA, and hundreds more leading tech giants.",
+      color: "from-blue-500/20 to-indigo-500/20",
+    },
+    {
+      name: "Energy",
+      desc: "ExxonMobil, Shell, BP and the world's largest energy producers.",
+      color: "from-yellow-500/20 to-orange-500/20",
+    },
+    {
+      name: "Healthcare",
+      desc: "Johnson & Johnson, Pfizer, UnitedHealth, and global pharma leaders.",
+      color: "from-green-500/20 to-teal-500/20",
+    },
+    {
+      name: "Finance",
+      desc: "JPMorgan, Goldman Sachs, Berkshire Hathaway, and major banks.",
+      color: "from-purple-500/20 to-pink-500/20",
+    },
   ];
 
   const borderColor = theme === "light" ? "#e5e7eb" : "#1f2937";
@@ -55,7 +100,8 @@ export default function StocksPage() {
           Trade Stocks
         </h1>
         <p className="text-xl md:text-2xl opacity-70 relative z-20 text-center max-w-2xl px-4 mb-8">
-          Invest in the world&apos;s leading companies. 500+ global equities with institutional-grade execution.
+          Invest in the world&apos;s leading companies. 500+ global equities
+          with institutional-grade execution.
         </p>
         <div className="flex gap-4 relative z-20 flex-wrap justify-center">
           <button className="px-8 py-3 bg-indigo-600 text-white rounded-full font-bold shadow-lg hover:bg-indigo-700 transition-colors">
@@ -92,9 +138,16 @@ export default function StocksPage() {
       <section className="py-24" style={{ backgroundColor: colors.background }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Your Edge</p>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Why trade stocks with Pangaea.</h2>
-            <p className="text-lg opacity-70">Everything you need to access global equity markets with confidence and precision.</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">
+              Your Edge
+            </p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">
+              Why trade stocks with Pangaea.
+            </h2>
+            <p className="text-lg opacity-70">
+              Everything you need to access global equity markets with
+              confidence and precision.
+            </p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -104,19 +157,26 @@ export default function StocksPage() {
                   key={idx}
                   className={cn(
                     "p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl",
-                    theme === "light" ? "hover:bg-white" : "hover:bg-zinc-900/50"
+                    theme === "light"
+                      ? "hover:bg-white"
+                      : "hover:bg-zinc-900/50",
                   )}
                   style={{ borderColor, backgroundColor: cardBg }}
                 >
                   <div className="text-indigo-500 mb-4">{adv.icon}</div>
                   <h3 className="text-lg font-bold mb-2">{adv.title}</h3>
-                  <p className="opacity-70 leading-relaxed text-sm">{adv.desc}</p>
+                  <p className="opacity-70 leading-relaxed text-sm">
+                    {adv.desc}
+                  </p>
                 </div>
               ))}
             </div>
 
             <div className="lg:w-1/2 w-full">
-              <div className="rounded-3xl overflow-hidden shadow-2xl h-[600px] border relative" style={{ borderColor }}>
+              <div
+                className="rounded-3xl overflow-hidden shadow-2xl h-[600px] border relative"
+                style={{ borderColor }}
+              >
                 <img
                   src="/images/stocks_trading_floor.png"
                   alt="Stock Exchange Trading Floor"
@@ -130,15 +190,28 @@ export default function StocksPage() {
       </section>
 
       {/* Sectors Section */}
-      <section className="py-24 border-t" style={{ borderColor, backgroundColor: sectionBg }}>
+      <section
+        className="py-24 border-t"
+        style={{ borderColor, backgroundColor: sectionBg }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div className="md:w-1/3 sticky top-32">
-              <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">Market Sectors</p>
-              <h2 className="text-4xl font-semibold mb-6">Top Sectors to Trade</h2>
-              <p className="text-lg opacity-70 mb-8">From blue-chip technology stocks to energy and healthcare — access every major sector from one account.</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-3">
+                Market Sectors
+              </p>
+              <h2 className="text-4xl font-semibold mb-6">
+                Top Sectors to Trade
+              </h2>
+              <p className="text-lg opacity-70 mb-8">
+                From blue-chip technology stocks to energy and healthcare —
+                access every major sector from one account.
+              </p>
 
-              <div className="rounded-2xl overflow-hidden shadow-xl mb-8 border h-48 relative" style={{ borderColor }}>
+              <div
+                className="rounded-2xl overflow-hidden shadow-xl mb-8 border h-48 relative"
+                style={{ borderColor }}
+              >
                 <img
                   src="/images/stocks_global_market.png"
                   alt="Global Stock Markets"
@@ -168,10 +241,18 @@ export default function StocksPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 border-t text-center" style={{ borderColor, backgroundColor: colors.background }}>
+      <section
+        className="py-24 border-t text-center"
+        style={{ borderColor, backgroundColor: colors.background }}
+      >
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Own a Piece of the Market.</h2>
-          <p className="text-xl opacity-70 mb-10">Open a live or demo account and start building your equity portfolio today.</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Own a Piece of the Market.
+          </h2>
+          <p className="text-xl opacity-70 mb-10">
+            Open a live or demo account and start building your equity portfolio
+            today.
+          </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <button className="px-8 py-4 bg-indigo-600 text-white rounded-full font-bold shadow-lg shadow-indigo-500/20 hover:bg-indigo-700 hover:scale-105 transition-all">
               Open Account
